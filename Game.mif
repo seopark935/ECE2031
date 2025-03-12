@@ -1,0 +1,97 @@
+WIDTH=16;
+DEPTH=2048;
+
+ADDRESS_RADIX=HEX;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+0000: B800; -- 					LOADI 0
+0001: 1054; -- 					STORE TotalScore
+0002: B800; -- 					LOADI 0
+0003: 1055; --                     STORE Rand
+0004: 9804; -- 					OUT Hex0
+0005: 1056; -- 					STORE Time
+0006: 1057; -- 					STORE Solution
+0007: 8033; -- 					CALL ShowScore
+0008: 9000; -- 					IN Switches
+0009: 9801; -- 					OUT LEDs
+000A: 400C; -- 					JZERO StartTimer
+000B: 2808; -- 					JUMP RoundStart
+000C: 0855; -- 					LOAD Rand
+000D: 6801; -- 					ADDI 1
+000E: 1055; -- 					STORE Rand
+000F: 9000; -- 					IN Switches
+0010: 9801; -- 					OUT LEDs
+0011: 2051; -- 					SUB Bit10
+0012: 4014; -- 					JZERO Guessing
+0013: 280C; -- 					JUMP StartTimer
+0014: 0855; -- 					LOAD Rand
+0015: 4852; -- 					AND Mask8
+0016: 4018; -- 					JZERO ZeroCase
+0017: 281A; -- 					JUMP ShowRand
+0018: 0855; -- 					LOAD Rand
+0019: 6018; -- 					SHIFT -8
+001A: 9804; -- 					OUT Hex0
+001B: 8039; -- 					CALL FindLowestSetBit
+001C: 1057; -- 					STORE Solution
+001D: 9802; -- 					OUT Timer
+001E: 9000; -- 					IN Switches
+001F: 9801; -- 					OUT LEDs
+0020: 2051; -- 					SUB Bit10
+0021: 401E; -- 					JZERO Check
+0022: 9002; -- 					IN Timer
+0023: 1056; -- 					STORE Time
+0024: 9000; -- 					IN Switches
+0025: 8039; -- 					CALL FindLowestSetBit
+0026: 2057; -- 					SUB Solution
+0027: 4029; -- 					JZERO Correct
+0028: 2800; -- 					JUMP FullReset ; Incorrect
+0029: B814; -- 					LOADI 20
+002A: 2056; -- 					SUB Time
+002B: 3830; --                     JPOS Positive
+002C: B800; -- 					LOADI 0
+002D: 1854; --                     ADD TotalScore
+002E: 1054; --                     STORE TotalScore
+002F: 2802; --                     JUMP RoundReset
+0030: 1854; -- 					ADD TotalScore
+0031: 1054; --                     STORE TotalScore
+0032: 2802; --                     JUMP RoundReset
+0033: 1038; -- 					STORE ACValue
+0034: 0854; -- 					LOAD TotalScore
+0035: 9805; -- 					OUT Hex1 ; Outputs to the 2-digit display on the left
+0036: 0838; -- 					LOAD ACValue
+0037: 8800; -- 					RETURN
+0038: 0000; -- ACValue: 			DW 0
+0039: 104F; -- 					STORE FLSB_Temp
+003A: B800; -- 					LOADI 0
+003B: 104D; -- 					STORE FLSB_Counter
+003C: 084F; -- 					LOAD FLSB_Temp
+003D: 4850; -- 					AND FLSB_Mask
+003E: 3848; -- 					JPOS FLSB_Found
+003F: 084D; -- 					LOAD FLSB_Counter
+0040: 1850; -- 					ADD FLSB_Mask
+0041: 104D; -- 					STORE FLSB_Counter
+0042: 204E; -- 					SUB FLSB_Difference
+0043: 384A; -- 					JPOS FLSB_NotFound
+0044: 084F; -- 					LOAD FLSB_Temp
+0045: 6011; -- 					SHIFT -1
+0046: 104F; -- 					STORE FLSB_Temp
+0047: 283C; -- 					JUMP StartLoop
+0048: 084D; -- 					LOAD FLSB_Counter
+0049: 8800; -- 					RETURN
+004A: B800; -- 					LOADI 0
+004B: 2050; -- 					SUB FLSB_Mask
+004C: 8800; -- 					RETURN
+004D: 0000; -- FLSB_Counter: 	  	DW 0
+004E: 0010; -- FLSB_Difference:  	DW 16
+004F: 0000; -- FLSB_Temp: 		  	DW 0
+0050: 0001; -- FLSB_Mask: 		  	DW 1
+0051: 0200; -- Bit10:				DW &H200	; Constants
+0052: 00FF; -- Mask8:				DW &HFF		;
+0053: 0001; -- Bit1: 				DW 1
+0054: 0000; -- TotalScore:			DW 0 		; Variables used during game
+0055: 0000; -- Rand:				DW 0
+0056: 0000; -- Time: 				DW 0
+0057: 0000; -- Solution: 			DW 0
+[0058..07FF] : 0000; -- [empty memory]
+END;

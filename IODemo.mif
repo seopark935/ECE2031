@@ -1,0 +1,70 @@
+WIDTH=16;
+DEPTH=2048;
+
+ADDRESS_RADIX=HEX;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+0000: 9000; -- 	IN  Switches
+0001: 103C; --     STORE Temp
+0002: B800; --     LOADI 0
+0003: 103A; --     STORE Counter
+0004: 4839; --     AND Bit10
+0005: 4009; --     JZERO Skip
+0006: 083A; --     LOAD Counter
+0007: 6801; --     ADDI 1
+0008: 103A; --     STORE Counter
+0009: 083C; -- 	LOAD Temp
+000A: 6001; --     SHIFT 1
+000B: 103C; --     STORE Temp
+000C: 400E; --     JZERO End
+000D: 2804; --     JUMP Loop
+000E: 083A; --    	LOAD Counter
+000F: 6FFE; --     ADDI -2
+0010: 3800; --     JPOS Start
+0011: 9000; --     IN Switches
+0012: 103B; --     STORE CurrentSwitch
+0013: 9801; --     OUT    LEDs
+0014: 1036; -- 	STORE  Pattern
+0015: 802C; -- 	CALL   Check
+0016: 0836; --     LOAD   Pattern
+0017: 4838; -- 	AND    Bit9         ; bit mask
+0018: 381E; -- 	JPOS   Right        ; bit9 is 1; go right
+0019: 0836; -- 	LOAD   Pattern
+001A: 6001; -- 	SHIFT  1
+001B: 1036; -- 	STORE  Pattern
+001C: 9801; -- 	OUT    LEDs
+001D: 2815; -- 	JUMP   Left
+001E: 802C; -- 	CALL   Check
+001F: 0836; -- 	LOAD   Pattern
+0020: 4837; -- 	AND    Bit0         ; bit mask
+0021: 3815; -- 	JPOS   Left         ; bit0 is 1; go left
+0022: 0836; -- 	LOAD   Pattern
+0023: 6011; -- 	SHIFT  -1
+0024: 1036; -- 	STORE  Pattern
+0025: 9801; -- 	OUT    LEDs
+0026: 281E; -- 	JUMP   Right
+0027: 9802; -- 	OUT    Timer
+0028: 9002; -- 	IN     Timer
+0029: 6FFB; -- 	ADDI   -5
+002A: 3028; -- 	JNEG   WaitingLoop
+002B: 8800; -- 	RETURN
+002C: 9000; -- 	IN Switches
+002D: 203B; --     SUB CurrentSwitch
+002E: 4033; --     JZERO DelayRelay
+002F: 9000; --     IN Switches
+0030: 9801; --     OUT LEDs
+0031: 1036; --     STORE Pattern
+0032: 103B; --     STORE CurrentSwitch
+0033: 8027; -- 	CALL Delay
+0034: 8800; --     RETURN
+0035: 0000; -- ACValue: DW 0
+0036: 0000; -- Pattern:   DW 0
+0037: 0001; -- Bit0:      DW &B0000000001
+0038: 0200; -- Bit9:      DW &B1000000000
+0039: 0400; -- Bit10:      DW &B10000000000
+003A: 0000; -- Counter: DW 0
+003B: 0000; -- CurrentSwitch: DW 0
+003C: 0000; -- Temp: DW 0
+[003D..07FF] : 0000; -- [empty memory]
+END;
