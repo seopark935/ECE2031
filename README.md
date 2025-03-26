@@ -1,2 +1,3 @@
 # ECE2031
 Spring 2025 ECE 2031 Final Project
+A DE10 LED peripheral used for an SCOMP system that interprets inputted values as an ASCII value, then converts into a readable morse code output, displaying dots with on LEDs and dashes with off LEDs. Additional functionality demonstrations are shown using assembly code, including but not limited to selecting a character displayed upon the 7-segment display outputted as morse code into LEDs, outputting all morse code values as a cycling program, and additional switch to LED interactivity.
