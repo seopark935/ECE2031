@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SCOMP
-Wed Mar 05 09:59:22 2025
+Wed Mar 26 09:24:25 2025
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -10,27 +10,23 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis RAM Summary
-  9. Analysis & Synthesis IP Cores Summary
- 10. State Machine - |SCOMP_System|SCOMP:inst|state
- 11. User-Specified and Inferred Latches
- 12. Registers Removed During Synthesis
- 13. General Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for SCOMP:inst|altsyncram:altsyncram_component|altsyncram_i424:auto_generated
- 16. Parameter Settings for User Entity Instance: SCOMP:inst|altsyncram:altsyncram_component
- 17. Parameter Settings for User Entity Instance: SCOMP:inst|LPM_CLSHIFT:shifter
- 18. Parameter Settings for User Entity Instance: SCOMP:inst|LPM_BUSTRI:io_bus
- 19. Parameter Settings for User Entity Instance: PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i
- 20. Parameter Settings for User Entity Instance: TIMER:inst4|LPM_BUSTRI:IO_BUS
- 21. Parameter Settings for User Entity Instance: DIG_IN:inst7|LPM_BUSTRI:IO_BUS
- 22. altsyncram Parameter Settings by Entity Instance
- 23. Post-Synthesis Netlist Statistics for Top Partition
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
+  5. Analysis & Synthesis IP Cores Summary
+  6. Source assignments for SCOMP:inst|altsyncram:altsyncram_component|altsyncram_at24:auto_generated
+  7. Source assignments for PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i
+  8. Source assignments for PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_0
+  9. Source assignments for PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_1
+ 10. Source assignments for PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_2
+ 11. Source assignments for PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_3
+ 12. Source assignments for PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_4
+ 13. Source assignments for sld_signaltap:auto_signaltap_0
+ 14. Parameter Settings for User Entity Instance: SCOMP:inst|altsyncram:altsyncram_component
+ 15. Parameter Settings for User Entity Instance: SCOMP:inst|LPM_CLSHIFT:shifter
+ 16. Parameter Settings for User Entity Instance: SCOMP:inst|LPM_BUSTRI:io_bus
+ 17. Parameter Settings for User Entity Instance: PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i
+ 18. Parameter Settings for User Entity Instance: DIG_IN:inst7|LPM_BUSTRI:IO_BUS
+ 19. Parameter Settings for User Entity Instance: TIMER:inst4|LPM_BUSTRI:IO_BUS
+ 20. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
+ 21. Analysis & Synthesis Messages
 
 
 
@@ -54,27 +50,22 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Mar 05 09:59:22 2025       ;
-; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                   ; SCOMP                                       ;
-; Top-level Entity Name           ; SCOMP_System                                ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 259                                         ;
-; Total pins                      ; 64                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 32,768                                      ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 1                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Wed Mar 26 09:24:25 2025           ;
+; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name               ; SCOMP                                       ;
+; Top-level Entity Name       ; SCOMP_System                                ;
+; Family                      ; Cyclone V                                   ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -86,6 +77,8 @@ https://fpgasoftware.intel.com/eula.
 ; Top-level entity name                                                           ; SCOMP_System       ; SCOMP              ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
+; VHDL Show LMF Mapping Messages                                                  ; Off                ;                    ;
+; VHDL Version                                                                    ; VHDL_2008          ; VHDL_1993          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
@@ -95,7 +88,6 @@ https://fpgasoftware.intel.com/eula.
 ; Preserve fewer node names                                                       ; On                 ; On                 ;
 ; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
 ; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
 ; State Machine Processing                                                        ; Auto               ; Auto               ;
 ; Safe State Machine                                                              ; Off                ; Off                ;
 ; Extract Verilog State Machines                                                  ; On                 ; On                 ;
@@ -174,237 +166,123 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 10          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 10          ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-10        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                          ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------------------+----------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                           ; Library  ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------------------+----------+
-; HEX_DISP.vhd                     ; yes             ; User VHDL File                         ; C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/HEX_DISP.vhd             ;          ;
-; DIG_OUT.vhd                      ; yes             ; User VHDL File                         ; C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/DIG_OUT.vhd              ;          ;
-; DIG_IN.vhd                       ; yes             ; User VHDL File                         ; C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/DIG_IN.vhd               ;          ;
-; clk_div.vhd                      ; yes             ; User VHDL File                         ; C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/clk_div.vhd              ;          ;
-; TIMER.vhd                        ; yes             ; User VHDL File                         ; C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/TIMER.vhd                ;          ;
-; IO_DECODER.vhd                   ; yes             ; User VHDL File                         ; C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/IO_DECODER.vhd           ;          ;
-; SCOMP.vhd                        ; yes             ; User VHDL File                         ; C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/SCOMP.vhd                ;          ;
-; SCOMP_System.bdf                 ; yes             ; User Block Diagram/Schematic File      ; C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/SCOMP_System.bdf         ;          ;
-; HEX_DISP_6.bdf                   ; yes             ; User Block Diagram/Schematic File      ; C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/HEX_DISP_6.bdf           ;          ;
-; PLL_main.vhd                     ; yes             ; User Wizard-Generated File             ; C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/PLL_main.vhd             ; PLL_main ;
-; PLL_main/PLL_main_0002.v         ; yes             ; User Verilog HDL File                  ; C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/PLL_main/PLL_main_0002.v ; PLL_main ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                  ;          ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                           ;          ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                     ;          ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                  ;          ;
-; aglobal201.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                  ;          ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                   ;          ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                      ;          ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                      ;          ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                    ;          ;
-; db/altsyncram_i424.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/db/altsyncram_i424.tdf   ;          ;
-; Game.mif                         ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/Game.mif                 ;          ;
-; lpm_clshift.tdf                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_clshift.tdf                                 ;          ;
-; db/lpm_clshift_fuc.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/db/lpm_clshift_fuc.tdf   ;          ;
-; lpm_bustri.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_bustri.tdf                                  ;          ;
-; altera_pll.v                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v                                    ;          ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------------------+----------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                     ;
-+---------------------------------------------+-----------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                             ;
-+---------------------------------------------+-----------------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 284                                                                               ;
-;                                             ;                                                                                   ;
-; Combinational ALUT usage for logic          ; 380                                                                               ;
-;     -- 7 input functions                    ; 1                                                                                 ;
-;     -- 6 input functions                    ; 81                                                                                ;
-;     -- 5 input functions                    ; 139                                                                               ;
-;     -- 4 input functions                    ; 68                                                                                ;
-;     -- <=3 input functions                  ; 91                                                                                ;
-;                                             ;                                                                                   ;
-; Dedicated logic registers                   ; 259                                                                               ;
-;                                             ;                                                                                   ;
-; I/O pins                                    ; 64                                                                                ;
-; Total MLAB memory bits                      ; 0                                                                                 ;
-; Total block memory bits                     ; 32768                                                                             ;
-;                                             ;                                                                                   ;
-; Total DSP Blocks                            ; 0                                                                                 ;
-;                                             ;                                                                                   ;
-; Total PLLs                                  ; 1                                                                                 ;
-;     -- PLLs                                 ; 1                                                                                 ;
-;                                             ;                                                                                   ;
-; Maximum fan-out node                        ; PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 256                                                                               ;
-; Total fan-out                               ; 2974                                                                              ;
-; Average fan-out                             ; 3.79                                                                              ;
-+---------------------------------------------+-----------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                           ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                     ; Entity Name     ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------+-----------------+--------------+
-; |SCOMP_System                             ; 380 (22)            ; 259 (0)                   ; 32768             ; 0          ; 64   ; 0            ; |SCOMP_System                                                                           ; SCOMP_System    ; work         ;
-;    |DIG_IN:inst7|                         ; 0 (0)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|DIG_IN:inst7                                                              ; DIG_IN          ; work         ;
-;    |DIG_OUT:inst6|                        ; 0 (0)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|DIG_OUT:inst6                                                             ; DIG_OUT         ; work         ;
-;    |HEX_DISP_6:inst9|                     ; 44 (2)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9                                                          ; HEX_DISP_6      ; work         ;
-;       |HEX_DISP:inst1|                    ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst1                                           ; HEX_DISP        ; work         ;
-;       |HEX_DISP:inst2|                    ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst2                                           ; HEX_DISP        ; work         ;
-;       |HEX_DISP:inst3|                    ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst3                                           ; HEX_DISP        ; work         ;
-;       |HEX_DISP:inst4|                    ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst4                                           ; HEX_DISP        ; work         ;
-;       |HEX_DISP:inst5|                    ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst5                                           ; HEX_DISP        ; work         ;
-;       |HEX_DISP:inst6|                    ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst6                                           ; HEX_DISP        ; work         ;
-;    |IO_DECODER:inst3|                     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|IO_DECODER:inst3                                                          ; IO_DECODER      ; work         ;
-;    |PLL_main:inst1|                       ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|PLL_main:inst1                                                            ; PLL_main        ; pll_main     ;
-;       |PLL_main_0002:pll_main_inst|       ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|PLL_main:inst1|PLL_main_0002:pll_main_inst                                ; PLL_main_0002   ; PLL_main     ;
-;          |altera_pll:altera_pll_i|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i        ; altera_pll      ; work         ;
-;    |SCOMP:inst|                           ; 252 (214)           ; 178 (178)                 ; 32768             ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst                                                                ; SCOMP           ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
-;          |altsyncram_i424:auto_generated| ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component|altsyncram_i424:auto_generated ; altsyncram_i424 ; work         ;
-;       |lpm_clshift:shifter|               ; 38 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter                                            ; lpm_clshift     ; work         ;
-;          |lpm_clshift_fuc:auto_generated| ; 38 (38)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter|lpm_clshift_fuc:auto_generated             ; lpm_clshift_fuc ; work         ;
-;    |TIMER:inst4|                          ; 33 (33)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|TIMER:inst4                                                               ; TIMER           ; work         ;
-;    |clk_div:inst5|                        ; 25 (25)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|clk_div:inst5                                                             ; clk_div         ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------+-----------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                         ;
-+--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+----------+
-; Name                                                                                 ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF      ;
-+--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+----------+
-; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_i424:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 2048         ; 16           ; --           ; --           ; 32768 ; Game.mif ;
-+--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+----------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                          ;
-+--------+--------------+---------+--------------+--------------+------------------------------+-----------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance              ; IP Include File ;
-+--------+--------------+---------+--------------+--------------+------------------------------+-----------------+
-; Altera ; altera_pll   ; 20.1    ; N/A          ; N/A          ; |SCOMP_System|PLL_main:inst1 ; PLL_main.vhd    ;
-+--------+--------------+---------+--------------+--------------+------------------------------+-----------------+
-
-
-Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |SCOMP_System|SCOMP:inst|state                                                                                                                                                                                                                                                                                                                                                                                                                                ;
-+------------------+---------------+--------------+--------------+-------------+----------------+--------------+-------------+--------------+---------------+-----------------+----------------+---------------+---------------+---------------+--------------+---------------+--------------+----------------+------------------+-----------------+----------------+-----------------+----------------+---------------+--------------+--------------+-------------+------------+
-; Name             ; state.ex_out2 ; state.ex_out ; state.ex_in2 ; state.ex_in ; state.ex_shift ; state.ex_xor ; state.ex_or ; state.ex_and ; state.ex_call ; state.ex_return ; state.ex_jzero ; state.ex_jneg ; state.ex_jpos ; state.ex_jump ; state.ex_sub ; state.ex_addi ; state.ex_add ; state.ex_loadi ; state.ex_istore2 ; state.ex_istore ; state.ex_iload ; state.ex_store2 ; state.ex_store ; state.ex_load ; state.ex_nop ; state.decode ; state.fetch ; state.init ;
-+------------------+---------------+--------------+--------------+-------------+----------------+--------------+-------------+--------------+---------------+-----------------+----------------+---------------+---------------+---------------+--------------+---------------+--------------+----------------+------------------+-----------------+----------------+-----------------+----------------+---------------+--------------+--------------+-------------+------------+
-; state.init       ; 0             ; 0            ; 0            ; 0           ; 0              ; 0            ; 0           ; 0            ; 0             ; 0               ; 0              ; 0             ; 0             ; 0             ; 0            ; 0             ; 0            ; 0              ; 0                ; 0               ; 0              ; 0               ; 0              ; 0             ; 0            ; 0            ; 0           ; 0          ;
-; state.fetch      ; 0             ; 0            ; 0            ; 0           ; 0              ; 0            ; 0           ; 0            ; 0             ; 0               ; 0              ; 0             ; 0             ; 0             ; 0            ; 0             ; 0            ; 0              ; 0                ; 0               ; 0              ; 0               ; 0              ; 0             ; 0            ; 0            ; 1           ; 1          ;
-; state.decode     ; 0             ; 0            ; 0            ; 0           ; 0              ; 0            ; 0           ; 0            ; 0             ; 0               ; 0              ; 0             ; 0             ; 0             ; 0            ; 0             ; 0            ; 0              ; 0                ; 0               ; 0              ; 0               ; 0              ; 0             ; 0            ; 1            ; 0           ; 1          ;
-; state.ex_nop     ; 0             ; 0            ; 0            ; 0           ; 0              ; 0            ; 0           ; 0            ; 0             ; 0               ; 0              ; 0             ; 0             ; 0             ; 0            ; 0             ; 0            ; 0              ; 0                ; 0               ; 0              ; 0               ; 0              ; 0             ; 1            ; 0            ; 0           ; 1          ;
-; state.ex_load    ; 0             ; 0            ; 0            ; 0           ; 0              ; 0            ; 0           ; 0            ; 0             ; 0               ; 0              ; 0             ; 0             ; 0             ; 0            ; 0             ; 0            ; 0              ; 0                ; 0               ; 0              ; 0               ; 0              ; 1             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_store   ; 0             ; 0            ; 0            ; 0           ; 0              ; 0            ; 0           ; 0            ; 0             ; 0               ; 0              ; 0             ; 0             ; 0             ; 0            ; 0             ; 0            ; 0              ; 0                ; 0               ; 0              ; 0               ; 1              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_store2  ; 0             ; 0            ; 0            ; 0           ; 0              ; 0            ; 0           ; 0            ; 0             ; 0               ; 0              ; 0             ; 0             ; 0             ; 0            ; 0             ; 0            ; 0              ; 0                ; 0               ; 0              ; 1               ; 0              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_iload   ; 0             ; 0            ; 0            ; 0           ; 0              ; 0            ; 0           ; 0            ; 0             ; 0               ; 0              ; 0             ; 0             ; 0             ; 0            ; 0             ; 0            ; 0              ; 0                ; 0               ; 1              ; 0               ; 0              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_istore  ; 0             ; 0            ; 0            ; 0           ; 0              ; 0            ; 0           ; 0            ; 0             ; 0               ; 0              ; 0             ; 0             ; 0             ; 0            ; 0             ; 0            ; 0              ; 0                ; 1               ; 0              ; 0               ; 0              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_istore2 ; 0             ; 0            ; 0            ; 0           ; 0              ; 0            ; 0           ; 0            ; 0             ; 0               ; 0              ; 0             ; 0             ; 0             ; 0            ; 0             ; 0            ; 0              ; 1                ; 0               ; 0              ; 0               ; 0              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_loadi   ; 0             ; 0            ; 0            ; 0           ; 0              ; 0            ; 0           ; 0            ; 0             ; 0               ; 0              ; 0             ; 0             ; 0             ; 0            ; 0             ; 0            ; 1              ; 0                ; 0               ; 0              ; 0               ; 0              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_add     ; 0             ; 0            ; 0            ; 0           ; 0              ; 0            ; 0           ; 0            ; 0             ; 0               ; 0              ; 0             ; 0             ; 0             ; 0            ; 0             ; 1            ; 0              ; 0                ; 0               ; 0              ; 0               ; 0              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_addi    ; 0             ; 0            ; 0            ; 0           ; 0              ; 0            ; 0           ; 0            ; 0             ; 0               ; 0              ; 0             ; 0             ; 0             ; 0            ; 1             ; 0            ; 0              ; 0                ; 0               ; 0              ; 0               ; 0              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_sub     ; 0             ; 0            ; 0            ; 0           ; 0              ; 0            ; 0           ; 0            ; 0             ; 0               ; 0              ; 0             ; 0             ; 0             ; 1            ; 0             ; 0            ; 0              ; 0                ; 0               ; 0              ; 0               ; 0              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_jump    ; 0             ; 0            ; 0            ; 0           ; 0              ; 0            ; 0           ; 0            ; 0             ; 0               ; 0              ; 0             ; 0             ; 1             ; 0            ; 0             ; 0            ; 0              ; 0                ; 0               ; 0              ; 0               ; 0              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_jpos    ; 0             ; 0            ; 0            ; 0           ; 0              ; 0            ; 0           ; 0            ; 0             ; 0               ; 0              ; 0             ; 1             ; 0             ; 0            ; 0             ; 0            ; 0              ; 0                ; 0               ; 0              ; 0               ; 0              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_jneg    ; 0             ; 0            ; 0            ; 0           ; 0              ; 0            ; 0           ; 0            ; 0             ; 0               ; 0              ; 1             ; 0             ; 0             ; 0            ; 0             ; 0            ; 0              ; 0                ; 0               ; 0              ; 0               ; 0              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_jzero   ; 0             ; 0            ; 0            ; 0           ; 0              ; 0            ; 0           ; 0            ; 0             ; 0               ; 1              ; 0             ; 0             ; 0             ; 0            ; 0             ; 0            ; 0              ; 0                ; 0               ; 0              ; 0               ; 0              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_return  ; 0             ; 0            ; 0            ; 0           ; 0              ; 0            ; 0           ; 0            ; 0             ; 1               ; 0              ; 0             ; 0             ; 0             ; 0            ; 0             ; 0            ; 0              ; 0                ; 0               ; 0              ; 0               ; 0              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_call    ; 0             ; 0            ; 0            ; 0           ; 0              ; 0            ; 0           ; 0            ; 1             ; 0               ; 0              ; 0             ; 0             ; 0             ; 0            ; 0             ; 0            ; 0              ; 0                ; 0               ; 0              ; 0               ; 0              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_and     ; 0             ; 0            ; 0            ; 0           ; 0              ; 0            ; 0           ; 1            ; 0             ; 0               ; 0              ; 0             ; 0             ; 0             ; 0            ; 0             ; 0            ; 0              ; 0                ; 0               ; 0              ; 0               ; 0              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_or      ; 0             ; 0            ; 0            ; 0           ; 0              ; 0            ; 1           ; 0            ; 0             ; 0               ; 0              ; 0             ; 0             ; 0             ; 0            ; 0             ; 0            ; 0              ; 0                ; 0               ; 0              ; 0               ; 0              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_xor     ; 0             ; 0            ; 0            ; 0           ; 0              ; 1            ; 0           ; 0            ; 0             ; 0               ; 0              ; 0             ; 0             ; 0             ; 0            ; 0             ; 0            ; 0              ; 0                ; 0               ; 0              ; 0               ; 0              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_shift   ; 0             ; 0            ; 0            ; 0           ; 1              ; 0            ; 0           ; 0            ; 0             ; 0               ; 0              ; 0             ; 0             ; 0             ; 0            ; 0             ; 0            ; 0              ; 0                ; 0               ; 0              ; 0               ; 0              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_in      ; 0             ; 0            ; 0            ; 1           ; 0              ; 0            ; 0           ; 0            ; 0             ; 0               ; 0              ; 0             ; 0             ; 0             ; 0            ; 0             ; 0            ; 0              ; 0                ; 0               ; 0              ; 0               ; 0              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_in2     ; 0             ; 0            ; 1            ; 0           ; 0              ; 0            ; 0           ; 0            ; 0             ; 0               ; 0              ; 0             ; 0             ; 0             ; 0            ; 0             ; 0            ; 0              ; 0                ; 0               ; 0              ; 0               ; 0              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_out     ; 0             ; 1            ; 0            ; 0           ; 0              ; 0            ; 0           ; 0            ; 0             ; 0               ; 0              ; 0             ; 0             ; 0             ; 0            ; 0             ; 0            ; 0              ; 0                ; 0               ; 0              ; 0               ; 0              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-; state.ex_out2    ; 1             ; 0            ; 0            ; 0           ; 0              ; 0            ; 0           ; 0            ; 0             ; 0               ; 0              ; 0             ; 0             ; 0             ; 0            ; 0             ; 0            ; 0              ; 0                ; 0               ; 0              ; 0               ; 0              ; 0             ; 0            ; 0            ; 0           ; 1          ;
-+------------------+---------------+--------------+--------------+-------------+----------------+--------------+-------------+--------------+---------------+-----------------+----------------+---------------+---------------+---------------+--------------+---------------+--------------+----------------+------------------+-----------------+----------------+-----------------+----------------+---------------+--------------+--------------+-------------+------------+
-
-
-+----------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                      ;
-+-----------------------------------------------------+---------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal       ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------------+------------------------+
-; TIMER:inst4|IO_COUNT[0]                             ; IO_DECODER:inst3|TIMER_EN ; yes                    ;
-; TIMER:inst4|IO_COUNT[1]                             ; IO_DECODER:inst3|TIMER_EN ; yes                    ;
-; TIMER:inst4|IO_COUNT[2]                             ; IO_DECODER:inst3|TIMER_EN ; yes                    ;
-; TIMER:inst4|IO_COUNT[3]                             ; IO_DECODER:inst3|TIMER_EN ; yes                    ;
-; TIMER:inst4|IO_COUNT[4]                             ; IO_DECODER:inst3|TIMER_EN ; yes                    ;
-; TIMER:inst4|IO_COUNT[5]                             ; IO_DECODER:inst3|TIMER_EN ; yes                    ;
-; TIMER:inst4|IO_COUNT[6]                             ; IO_DECODER:inst3|TIMER_EN ; yes                    ;
-; TIMER:inst4|IO_COUNT[7]                             ; IO_DECODER:inst3|TIMER_EN ; yes                    ;
-; TIMER:inst4|IO_COUNT[8]                             ; IO_DECODER:inst3|TIMER_EN ; yes                    ;
-; TIMER:inst4|IO_COUNT[9]                             ; IO_DECODER:inst3|TIMER_EN ; yes                    ;
-; TIMER:inst4|IO_COUNT[10]                            ; IO_DECODER:inst3|TIMER_EN ; yes                    ;
-; TIMER:inst4|IO_COUNT[11]                            ; IO_DECODER:inst3|TIMER_EN ; yes                    ;
-; TIMER:inst4|IO_COUNT[12]                            ; IO_DECODER:inst3|TIMER_EN ; yes                    ;
-; TIMER:inst4|IO_COUNT[13]                            ; IO_DECODER:inst3|TIMER_EN ; yes                    ;
-; TIMER:inst4|IO_COUNT[14]                            ; IO_DECODER:inst3|TIMER_EN ; yes                    ;
-; TIMER:inst4|IO_COUNT[15]                            ; IO_DECODER:inst3|TIMER_EN ; yes                    ;
-; Number of user-specified and inferred latches = 16  ;                           ;                        ;
-+-----------------------------------------------------+---------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; DIG_IN:inst7|B_DI[10..15]             ; Stuck at GND due to stuck port data_in ;
-; SCOMP:inst|state.ex_nop               ; Lost fanout                            ;
-; Total Number of Removed Registers = 7 ;                                        ;
-+---------------------------------------+----------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 259   ;
-; Number of registers using Synchronous Clear  ; 30    ;
-; Number of registers using Synchronous Load   ; 99    ;
-; Number of registers using Asynchronous Clear ; 77    ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 151   ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-; 3:1                ; 99 bits   ; 198 LEs       ; 0 LEs                ; 198 LEs                ; Yes        ; |SCOMP_System|SCOMP:inst|PC_stack[3][10] ;
-; 11:1               ; 11 bits   ; 77 LEs        ; 22 LEs               ; 55 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|PC[10]          ;
-; 12:1               ; 16 bits   ; 128 LEs       ; 96 LEs               ; 32 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|AC[7]           ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |SCOMP_System|IO_DATA[1]                 ;
-; 12:1               ; 16 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |SCOMP_System|SCOMP:inst|Add1            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                                                                                                                                                               ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                                                                                                                                                                                                                                   ; IP Include File ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |SCOMP_System|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                 ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |SCOMP_System|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                             ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |SCOMP_System|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_presplit:presplit   ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |SCOMP_System|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |SCOMP_System|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_splitter:splitter   ;                 ;
+; Altera ; altera_pll   ; 20.1    ; N/A          ; N/A          ; |SCOMP_System|PLL_main:inst1                                                                                                                                                                                                                                                      ; PLL_main.vhd    ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
 +--------------------------------------------------------------------------------------------------+
-; Source assignments for SCOMP:inst|altsyncram:altsyncram_component|altsyncram_i424:auto_generated ;
+; Source assignments for SCOMP:inst|altsyncram:altsyncram_component|altsyncram_at24:auto_generated ;
 +---------------------------------+--------------------+------+------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                 ;
 +---------------------------------+--------------------+------+------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                  ;
 +---------------------------------+--------------------+------+------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Source assignments for PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i ;
++------------------------------+-------+------+---------------------------------------------+
+; Assignment                   ; Value ; From ; To                                          ;
++------------------------------+-------+------+---------------------------------------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; cntsel_temp[4]                              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; cntsel_temp[4]                              ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; cntsel_temp[3]                              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; cntsel_temp[3]                              ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; cntsel_temp[2]                              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; cntsel_temp[2]                              ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; cntsel_temp[1]                              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; cntsel_temp[1]                              ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; cntsel_temp[0]                              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; cntsel_temp[0]                              ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; gnd                                         ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; gnd                                         ;
++------------------------------+-------+------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_0 ;
++--------------------------------------+-------+------+----------------------------------------------------------------------------------+
+; Assignment                           ; Value ; From ; To                                                                               ;
++--------------------------------------+-------+------+----------------------------------------------------------------------------------+
+; PHYSICAL_SYNTHESIS_COMBO_LOGIC       ; OFF   ; -    ; -                                                                                ;
+; PHYSICAL_SYNTHESIS_REGISTER_RETIMING ; OFF   ; -    ; -                                                                                ;
+; ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP  ; OFF   ; -    ; -                                                                                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS         ; OFF   ; -    ; -                                                                                ;
++--------------------------------------+-------+------+----------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_1 ;
++--------------------------------------+-------+------+----------------------------------------------------------------------------------+
+; Assignment                           ; Value ; From ; To                                                                               ;
++--------------------------------------+-------+------+----------------------------------------------------------------------------------+
+; PHYSICAL_SYNTHESIS_COMBO_LOGIC       ; OFF   ; -    ; -                                                                                ;
+; PHYSICAL_SYNTHESIS_REGISTER_RETIMING ; OFF   ; -    ; -                                                                                ;
+; ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP  ; OFF   ; -    ; -                                                                                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS         ; OFF   ; -    ; -                                                                                ;
++--------------------------------------+-------+------+----------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_2 ;
++--------------------------------------+-------+------+----------------------------------------------------------------------------------+
+; Assignment                           ; Value ; From ; To                                                                               ;
++--------------------------------------+-------+------+----------------------------------------------------------------------------------+
+; PHYSICAL_SYNTHESIS_COMBO_LOGIC       ; OFF   ; -    ; -                                                                                ;
+; PHYSICAL_SYNTHESIS_REGISTER_RETIMING ; OFF   ; -    ; -                                                                                ;
+; ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP  ; OFF   ; -    ; -                                                                                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS         ; OFF   ; -    ; -                                                                                ;
++--------------------------------------+-------+------+----------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_3 ;
++--------------------------------------+-------+------+----------------------------------------------------------------------------------+
+; Assignment                           ; Value ; From ; To                                                                               ;
++--------------------------------------+-------+------+----------------------------------------------------------------------------------+
+; PHYSICAL_SYNTHESIS_COMBO_LOGIC       ; OFF   ; -    ; -                                                                                ;
+; PHYSICAL_SYNTHESIS_REGISTER_RETIMING ; OFF   ; -    ; -                                                                                ;
+; ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP  ; OFF   ; -    ; -                                                                                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS         ; OFF   ; -    ; -                                                                                ;
++--------------------------------------+-------+------+----------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_4 ;
++--------------------------------------+-------+------+----------------------------------------------------------------------------------+
+; Assignment                           ; Value ; From ; To                                                                               ;
++--------------------------------------+-------+------+----------------------------------------------------------------------------------+
+; PHYSICAL_SYNTHESIS_COMBO_LOGIC       ; OFF   ; -    ; -                                                                                ;
+; PHYSICAL_SYNTHESIS_REGISTER_RETIMING ; OFF   ; -    ; -                                                                                ;
+; ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP  ; OFF   ; -    ; -                                                                                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS         ; OFF   ; -    ; -                                                                                ;
++--------------------------------------+-------+------+----------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------+
+; Source assignments for sld_signaltap:auto_signaltap_0 ;
++-----------------+-------+------+----------------------+
+; Assignment      ; Value ; From ; To                   ;
++-----------------+-------+------+----------------------+
+; MESSAGE_DISABLE ; 13410 ; -    ; -                    ;
++-----------------+-------+------+----------------------+
 
 
 +-----------------------------------------------------------------------------------------+
@@ -450,7 +328,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                     ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                     ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                     ;
-; INIT_FILE                          ; Game.mif             ; Untyped                     ;
+; INIT_FILE                          ; NewLEDsTest.mif      ; Untyped                     ;
 ; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                     ;
 ; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer              ;
 ; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                     ;
@@ -463,7 +341,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                     ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer              ;
 ; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                     ;
-; CBXI_PARAMETER                     ; altsyncram_i424      ; Untyped                     ;
+; CBXI_PARAMETER                     ; altsyncram_at24      ; Untyped                     ;
 +------------------------------------+----------------------+-----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -499,20 +377,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------------------------+------------------------+-------------------------------------------------+
 ; reference_clock_frequency            ; 50.0 MHz               ; String                                          ;
 ; fractional_vco_multiplier            ; false                  ; String                                          ;
-; pll_type                             ; General                ; String                                          ;
+; pll_type                             ; Cyclone V              ; String                                          ;
 ; pll_subtype                          ; General                ; String                                          ;
-; number_of_clocks                     ; 1                      ; Signed Integer                                  ;
+; number_of_clocks                     ; 3                      ; Signed Integer                                  ;
 ; operation_mode                       ; direct                 ; String                                          ;
 ; deserialization_factor               ; 4                      ; Signed Integer                                  ;
 ; data_rate                            ; 0                      ; Signed Integer                                  ;
 ; sim_additional_refclk_cycles_to_lock ; 0                      ; Signed Integer                                  ;
-; output_clock_frequency0              ; 10.000000 MHz          ; String                                          ;
+; output_clock_frequency0              ; 12.000000 MHz          ; String                                          ;
 ; phase_shift0                         ; 0 ps                   ; String                                          ;
 ; duty_cycle0                          ; 50                     ; Signed Integer                                  ;
-; output_clock_frequency1              ; 0 MHz                  ; String                                          ;
+; output_clock_frequency1              ; 1.200000 MHz           ; String                                          ;
 ; phase_shift1                         ; 0 ps                   ; String                                          ;
 ; duty_cycle1                          ; 50                     ; Signed Integer                                  ;
-; output_clock_frequency2              ; 0 MHz                  ; String                                          ;
+; output_clock_frequency2              ; 100.000000 MHz         ; String                                          ;
 ; phase_shift2                         ; 0 ps                   ; String                                          ;
 ; duty_cycle2                          ; 50                     ; Signed Integer                                  ;
 ; output_clock_frequency3              ; 0 MHz                  ; String                                          ;
@@ -578,152 +456,152 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; clock_name_global_6                  ; false                  ; String                                          ;
 ; clock_name_global_7                  ; false                  ; String                                          ;
 ; clock_name_global_8                  ; false                  ; String                                          ;
-; m_cnt_hi_div                         ; 1                      ; Signed Integer                                  ;
-; m_cnt_lo_div                         ; 1                      ; Signed Integer                                  ;
+; m_cnt_hi_div                         ; 3                      ; Signed Integer                                  ;
+; m_cnt_lo_div                         ; 3                      ; Signed Integer                                  ;
 ; m_cnt_bypass_en                      ; false                  ; String                                          ;
 ; m_cnt_odd_div_duty_en                ; false                  ; String                                          ;
-; n_cnt_hi_div                         ; 1                      ; Signed Integer                                  ;
-; n_cnt_lo_div                         ; 1                      ; Signed Integer                                  ;
-; n_cnt_bypass_en                      ; false                  ; String                                          ;
+; n_cnt_hi_div                         ; 256                    ; Signed Integer                                  ;
+; n_cnt_lo_div                         ; 256                    ; Signed Integer                                  ;
+; n_cnt_bypass_en                      ; true                   ; String                                          ;
 ; n_cnt_odd_div_duty_en                ; false                  ; String                                          ;
-; c_cnt_hi_div0                        ; 1                      ; Signed Integer                                  ;
-; c_cnt_lo_div0                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_hi_div0                        ; 13                     ; Signed Integer                                  ;
+; c_cnt_lo_div0                        ; 12                     ; Signed Integer                                  ;
 ; c_cnt_bypass_en0                     ; false                  ; String                                          ;
 ; c_cnt_in_src0                        ; ph_mux_clk             ; String                                          ;
-; c_cnt_odd_div_duty_en0               ; false                  ; String                                          ;
+; c_cnt_odd_div_duty_en0               ; true                   ; String                                          ;
 ; c_cnt_prst0                          ; 1                      ; Signed Integer                                  ;
 ; c_cnt_ph_mux_prst0                   ; 0                      ; Signed Integer                                  ;
-; c_cnt_hi_div1                        ; 1                      ; Signed Integer                                  ;
-; c_cnt_lo_div1                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_hi_div1                        ; 125                    ; Signed Integer                                  ;
+; c_cnt_lo_div1                        ; 125                    ; Signed Integer                                  ;
 ; c_cnt_bypass_en1                     ; false                  ; String                                          ;
 ; c_cnt_in_src1                        ; ph_mux_clk             ; String                                          ;
 ; c_cnt_odd_div_duty_en1               ; false                  ; String                                          ;
 ; c_cnt_prst1                          ; 1                      ; Signed Integer                                  ;
 ; c_cnt_ph_mux_prst1                   ; 0                      ; Signed Integer                                  ;
-; c_cnt_hi_div2                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_hi_div2                        ; 2                      ; Signed Integer                                  ;
 ; c_cnt_lo_div2                        ; 1                      ; Signed Integer                                  ;
 ; c_cnt_bypass_en2                     ; false                  ; String                                          ;
-; c_cnt_in_src2                        ; ph_mux_clk             ; String                                          ;
-; c_cnt_odd_div_duty_en2               ; false                  ; String                                          ;
+; c_cnt_in_src2                        ; cscd_clk               ; String                                          ;
+; c_cnt_odd_div_duty_en2               ; true                   ; String                                          ;
 ; c_cnt_prst2                          ; 1                      ; Signed Integer                                  ;
 ; c_cnt_ph_mux_prst2                   ; 0                      ; Signed Integer                                  ;
 ; c_cnt_hi_div3                        ; 1                      ; Signed Integer                                  ;
 ; c_cnt_lo_div3                        ; 1                      ; Signed Integer                                  ;
-; c_cnt_bypass_en3                     ; false                  ; String                                          ;
+; c_cnt_bypass_en3                     ; true                   ; String                                          ;
 ; c_cnt_in_src3                        ; ph_mux_clk             ; String                                          ;
 ; c_cnt_odd_div_duty_en3               ; false                  ; String                                          ;
 ; c_cnt_prst3                          ; 1                      ; Signed Integer                                  ;
 ; c_cnt_ph_mux_prst3                   ; 0                      ; Signed Integer                                  ;
 ; c_cnt_hi_div4                        ; 1                      ; Signed Integer                                  ;
 ; c_cnt_lo_div4                        ; 1                      ; Signed Integer                                  ;
-; c_cnt_bypass_en4                     ; false                  ; String                                          ;
+; c_cnt_bypass_en4                     ; true                   ; String                                          ;
 ; c_cnt_in_src4                        ; ph_mux_clk             ; String                                          ;
 ; c_cnt_odd_div_duty_en4               ; false                  ; String                                          ;
 ; c_cnt_prst4                          ; 1                      ; Signed Integer                                  ;
 ; c_cnt_ph_mux_prst4                   ; 0                      ; Signed Integer                                  ;
 ; c_cnt_hi_div5                        ; 1                      ; Signed Integer                                  ;
 ; c_cnt_lo_div5                        ; 1                      ; Signed Integer                                  ;
-; c_cnt_bypass_en5                     ; false                  ; String                                          ;
+; c_cnt_bypass_en5                     ; true                   ; String                                          ;
 ; c_cnt_in_src5                        ; ph_mux_clk             ; String                                          ;
 ; c_cnt_odd_div_duty_en5               ; false                  ; String                                          ;
 ; c_cnt_prst5                          ; 1                      ; Signed Integer                                  ;
 ; c_cnt_ph_mux_prst5                   ; 0                      ; Signed Integer                                  ;
 ; c_cnt_hi_div6                        ; 1                      ; Signed Integer                                  ;
 ; c_cnt_lo_div6                        ; 1                      ; Signed Integer                                  ;
-; c_cnt_bypass_en6                     ; false                  ; String                                          ;
+; c_cnt_bypass_en6                     ; true                   ; String                                          ;
 ; c_cnt_in_src6                        ; ph_mux_clk             ; String                                          ;
 ; c_cnt_odd_div_duty_en6               ; false                  ; String                                          ;
 ; c_cnt_prst6                          ; 1                      ; Signed Integer                                  ;
 ; c_cnt_ph_mux_prst6                   ; 0                      ; Signed Integer                                  ;
 ; c_cnt_hi_div7                        ; 1                      ; Signed Integer                                  ;
 ; c_cnt_lo_div7                        ; 1                      ; Signed Integer                                  ;
-; c_cnt_bypass_en7                     ; false                  ; String                                          ;
+; c_cnt_bypass_en7                     ; true                   ; String                                          ;
 ; c_cnt_in_src7                        ; ph_mux_clk             ; String                                          ;
 ; c_cnt_odd_div_duty_en7               ; false                  ; String                                          ;
 ; c_cnt_prst7                          ; 1                      ; Signed Integer                                  ;
 ; c_cnt_ph_mux_prst7                   ; 0                      ; Signed Integer                                  ;
 ; c_cnt_hi_div8                        ; 1                      ; Signed Integer                                  ;
 ; c_cnt_lo_div8                        ; 1                      ; Signed Integer                                  ;
-; c_cnt_bypass_en8                     ; false                  ; String                                          ;
+; c_cnt_bypass_en8                     ; true                   ; String                                          ;
 ; c_cnt_in_src8                        ; ph_mux_clk             ; String                                          ;
 ; c_cnt_odd_div_duty_en8               ; false                  ; String                                          ;
 ; c_cnt_prst8                          ; 1                      ; Signed Integer                                  ;
 ; c_cnt_ph_mux_prst8                   ; 0                      ; Signed Integer                                  ;
 ; c_cnt_hi_div9                        ; 1                      ; Signed Integer                                  ;
 ; c_cnt_lo_div9                        ; 1                      ; Signed Integer                                  ;
-; c_cnt_bypass_en9                     ; false                  ; String                                          ;
+; c_cnt_bypass_en9                     ; true                   ; String                                          ;
 ; c_cnt_in_src9                        ; ph_mux_clk             ; String                                          ;
 ; c_cnt_odd_div_duty_en9               ; false                  ; String                                          ;
 ; c_cnt_prst9                          ; 1                      ; Signed Integer                                  ;
 ; c_cnt_ph_mux_prst9                   ; 0                      ; Signed Integer                                  ;
 ; c_cnt_hi_div10                       ; 1                      ; Signed Integer                                  ;
 ; c_cnt_lo_div10                       ; 1                      ; Signed Integer                                  ;
-; c_cnt_bypass_en10                    ; false                  ; String                                          ;
+; c_cnt_bypass_en10                    ; true                   ; String                                          ;
 ; c_cnt_in_src10                       ; ph_mux_clk             ; String                                          ;
 ; c_cnt_odd_div_duty_en10              ; false                  ; String                                          ;
 ; c_cnt_prst10                         ; 1                      ; Signed Integer                                  ;
 ; c_cnt_ph_mux_prst10                  ; 0                      ; Signed Integer                                  ;
 ; c_cnt_hi_div11                       ; 1                      ; Signed Integer                                  ;
 ; c_cnt_lo_div11                       ; 1                      ; Signed Integer                                  ;
-; c_cnt_bypass_en11                    ; false                  ; String                                          ;
+; c_cnt_bypass_en11                    ; true                   ; String                                          ;
 ; c_cnt_in_src11                       ; ph_mux_clk             ; String                                          ;
 ; c_cnt_odd_div_duty_en11              ; false                  ; String                                          ;
 ; c_cnt_prst11                         ; 1                      ; Signed Integer                                  ;
 ; c_cnt_ph_mux_prst11                  ; 0                      ; Signed Integer                                  ;
 ; c_cnt_hi_div12                       ; 1                      ; Signed Integer                                  ;
 ; c_cnt_lo_div12                       ; 1                      ; Signed Integer                                  ;
-; c_cnt_bypass_en12                    ; false                  ; String                                          ;
+; c_cnt_bypass_en12                    ; true                   ; String                                          ;
 ; c_cnt_in_src12                       ; ph_mux_clk             ; String                                          ;
 ; c_cnt_odd_div_duty_en12              ; false                  ; String                                          ;
 ; c_cnt_prst12                         ; 1                      ; Signed Integer                                  ;
 ; c_cnt_ph_mux_prst12                  ; 0                      ; Signed Integer                                  ;
 ; c_cnt_hi_div13                       ; 1                      ; Signed Integer                                  ;
 ; c_cnt_lo_div13                       ; 1                      ; Signed Integer                                  ;
-; c_cnt_bypass_en13                    ; false                  ; String                                          ;
+; c_cnt_bypass_en13                    ; true                   ; String                                          ;
 ; c_cnt_in_src13                       ; ph_mux_clk             ; String                                          ;
 ; c_cnt_odd_div_duty_en13              ; false                  ; String                                          ;
 ; c_cnt_prst13                         ; 1                      ; Signed Integer                                  ;
 ; c_cnt_ph_mux_prst13                  ; 0                      ; Signed Integer                                  ;
 ; c_cnt_hi_div14                       ; 1                      ; Signed Integer                                  ;
 ; c_cnt_lo_div14                       ; 1                      ; Signed Integer                                  ;
-; c_cnt_bypass_en14                    ; false                  ; String                                          ;
+; c_cnt_bypass_en14                    ; true                   ; String                                          ;
 ; c_cnt_in_src14                       ; ph_mux_clk             ; String                                          ;
 ; c_cnt_odd_div_duty_en14              ; false                  ; String                                          ;
 ; c_cnt_prst14                         ; 1                      ; Signed Integer                                  ;
 ; c_cnt_ph_mux_prst14                  ; 0                      ; Signed Integer                                  ;
 ; c_cnt_hi_div15                       ; 1                      ; Signed Integer                                  ;
 ; c_cnt_lo_div15                       ; 1                      ; Signed Integer                                  ;
-; c_cnt_bypass_en15                    ; false                  ; String                                          ;
+; c_cnt_bypass_en15                    ; true                   ; String                                          ;
 ; c_cnt_in_src15                       ; ph_mux_clk             ; String                                          ;
 ; c_cnt_odd_div_duty_en15              ; false                  ; String                                          ;
 ; c_cnt_prst15                         ; 1                      ; Signed Integer                                  ;
 ; c_cnt_ph_mux_prst15                  ; 0                      ; Signed Integer                                  ;
 ; c_cnt_hi_div16                       ; 1                      ; Signed Integer                                  ;
 ; c_cnt_lo_div16                       ; 1                      ; Signed Integer                                  ;
-; c_cnt_bypass_en16                    ; false                  ; String                                          ;
+; c_cnt_bypass_en16                    ; true                   ; String                                          ;
 ; c_cnt_in_src16                       ; ph_mux_clk             ; String                                          ;
 ; c_cnt_odd_div_duty_en16              ; false                  ; String                                          ;
 ; c_cnt_prst16                         ; 1                      ; Signed Integer                                  ;
 ; c_cnt_ph_mux_prst16                  ; 0                      ; Signed Integer                                  ;
 ; c_cnt_hi_div17                       ; 1                      ; Signed Integer                                  ;
 ; c_cnt_lo_div17                       ; 1                      ; Signed Integer                                  ;
-; c_cnt_bypass_en17                    ; false                  ; String                                          ;
+; c_cnt_bypass_en17                    ; true                   ; String                                          ;
 ; c_cnt_in_src17                       ; ph_mux_clk             ; String                                          ;
 ; c_cnt_odd_div_duty_en17              ; false                  ; String                                          ;
 ; c_cnt_prst17                         ; 1                      ; Signed Integer                                  ;
 ; c_cnt_ph_mux_prst17                  ; 0                      ; Signed Integer                                  ;
-; pll_vco_div                          ; 1                      ; Signed Integer                                  ;
+; pll_vco_div                          ; 2                      ; Signed Integer                                  ;
 ; pll_slf_rst                          ; false                  ; String                                          ;
 ; pll_bw_sel                           ; low                    ; String                                          ;
-; pll_output_clk_frequency             ; 0 MHz                  ; String                                          ;
-; pll_cp_current                       ; 0                      ; Signed Integer                                  ;
-; pll_bwctrl                           ; 0                      ; Signed Integer                                  ;
-; pll_fractional_division              ; 1                      ; Signed Integer                                  ;
-; pll_fractional_cout                  ; 24                     ; Signed Integer                                  ;
+; pll_output_clk_frequency             ; 300.0 MHz              ; String                                          ;
+; pll_cp_current                       ; 20                     ; Signed Integer                                  ;
+; pll_bwctrl                           ; 2000                   ; Signed Integer                                  ;
+; pll_fractional_division              ; 1                      ; String                                          ;
+; pll_fractional_cout                  ; 32                     ; Signed Integer                                  ;
 ; pll_dsm_out_sel                      ; 1st_order              ; String                                          ;
-; mimic_fbclk_type                     ; gclk                   ; String                                          ;
+; mimic_fbclk_type                     ; none                   ; String                                          ;
 ; pll_fbclk_mux_1                      ; glb                    ; String                                          ;
-; pll_fbclk_mux_2                      ; fb_1                   ; String                                          ;
+; pll_fbclk_mux_2                      ; m_cnt                  ; String                                          ;
 ; pll_m_cnt_in_src                     ; ph_mux_clk             ; String                                          ;
 ; pll_vcoph_div                        ; 1                      ; Signed Integer                                  ;
 ; refclk1_frequency                    ; 0 MHz                  ; String                                          ;
@@ -739,16 +617,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: TIMER:inst4|LPM_BUSTRI:IO_BUS ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; LPM_WIDTH      ; 16    ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-----------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: DIG_IN:inst7|LPM_BUSTRI:IO_BUS ;
 +----------------+-------+----------------------------------------------------+
@@ -759,68 +627,80 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                       ;
-+-------------------------------------------+--------------------------------------------+
-; Name                                      ; Value                                      ;
-+-------------------------------------------+--------------------------------------------+
-; Number of entity instances                ; 1                                          ;
-; Entity Instance                           ; SCOMP:inst|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; SINGLE_PORT                                ;
-;     -- WIDTH_A                            ; 16                                         ;
-;     -- NUMWORDS_A                         ; 2048                                       ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                               ;
-;     -- WIDTH_B                            ; 1                                          ;
-;     -- NUMWORDS_B                         ; 0                                          ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                     ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                               ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                       ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                  ;
-+-------------------------------------------+--------------------------------------------+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TIMER:inst4|LPM_BUSTRI:IO_BUS ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; LPM_WIDTH      ; 16    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 259                         ;
-;     CLR               ; 77                          ;
-;     ENA               ; 41                          ;
-;     ENA SCLR          ; 11                          ;
-;     ENA SLD           ; 99                          ;
-;     SCLR              ; 19                          ;
-;     plain             ; 12                          ;
-; arriav_lcell_comb     ; 386                         ;
-;     arith             ; 62                          ;
-;         1 data inputs ; 45                          ;
-;         2 data inputs ; 1                           ;
-;         5 data inputs ; 16                          ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 323                         ;
-;         1 data inputs ; 7                           ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 34                          ;
-;         4 data inputs ; 68                          ;
-;         5 data inputs ; 123                         ;
-;         6 data inputs ; 81                          ;
-; boundary_port         ; 64                          ;
-; generic_pll           ; 1                           ;
-; stratixv_ram_block    ; 16                          ;
-;                       ;                             ;
-; Max LUT depth         ; 4.50                        ;
-; Average LUT depth     ; 2.35                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:01     ;
-+----------------+--------------+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0                        ;
++-------------------------------------------------+-------------------------------------+----------------+
+; Parameter Name                                  ; Value                               ; Type           ;
++-------------------------------------------------+-------------------------------------+----------------+
+; lpm_type                                        ; sld_signaltap                       ; String         ;
+; sld_node_info                                   ; 805334528                           ; Untyped        ;
+; SLD_SECTION_ID                                  ; hdl_signaltap_0                     ; String         ;
+; SLD_IP_VERSION                                  ; 6                                   ; Signed Integer ;
+; SLD_IP_MINOR_VERSION                            ; 0                                   ; Signed Integer ;
+; SLD_COMMON_IP_VERSION                           ; 0                                   ; Signed Integer ;
+; sld_data_bits                                   ; 3                                   ; Untyped        ;
+; sld_trigger_bits                                ; 3                                   ; Untyped        ;
+; SLD_NODE_CRC_BITS                               ; 32                                  ; Signed Integer ;
+; SLD_NODE_CRC_HIWORD                             ; 41394                               ; Signed Integer ;
+; SLD_NODE_CRC_LOWORD                             ; 50132                               ; Signed Integer ;
+; sld_incremental_routing                         ; 1                                   ; Untyped        ;
+; sld_sample_depth                                ; 4096                                ; Untyped        ;
+; sld_segment_size                                ; 4096                                ; Untyped        ;
+; sld_ram_block_type                              ; AUTO                                ; Untyped        ;
+; sld_state_bits                                  ; 11                                  ; Untyped        ;
+; sld_buffer_full_stop                            ; 1                                   ; Untyped        ;
+; SLD_MEM_ADDRESS_BITS                            ; 7                                   ; Signed Integer ;
+; SLD_DATA_BIT_CNTR_BITS                          ; 4                                   ; Signed Integer ;
+; sld_trigger_level                               ; 1                                   ; Untyped        ;
+; sld_trigger_in_enabled                          ; 0                                   ; Untyped        ;
+; SLD_HPS_TRIGGER_IN_ENABLED                      ; 0                                   ; Signed Integer ;
+; SLD_HPS_TRIGGER_OUT_ENABLED                     ; 0                                   ; Signed Integer ;
+; SLD_HPS_EVENT_ENABLED                           ; 0                                   ; Signed Integer ;
+; SLD_HPS_EVENT_ID                                ; 0                                   ; Signed Integer ;
+; sld_advanced_trigger_entity                     ; basic,1,                            ; Untyped        ;
+; sld_trigger_level_pipeline                      ; 1                                   ; Untyped        ;
+; sld_trigger_pipeline                            ; 0                                   ; Untyped        ;
+; sld_ram_pipeline                                ; 0                                   ; Untyped        ;
+; sld_counter_pipeline                            ; 0                                   ; Untyped        ;
+; sld_enable_advanced_trigger                     ; 0                                   ; Untyped        ;
+; SLD_ADVANCED_TRIGGER_1                          ; NONE                                ; String         ;
+; SLD_ADVANCED_TRIGGER_2                          ; NONE                                ; String         ;
+; SLD_ADVANCED_TRIGGER_3                          ; NONE                                ; String         ;
+; SLD_ADVANCED_TRIGGER_4                          ; NONE                                ; String         ;
+; SLD_ADVANCED_TRIGGER_5                          ; NONE                                ; String         ;
+; SLD_ADVANCED_TRIGGER_6                          ; NONE                                ; String         ;
+; SLD_ADVANCED_TRIGGER_7                          ; NONE                                ; String         ;
+; SLD_ADVANCED_TRIGGER_8                          ; NONE                                ; String         ;
+; SLD_ADVANCED_TRIGGER_9                          ; NONE                                ; String         ;
+; SLD_ADVANCED_TRIGGER_10                         ; NONE                                ; String         ;
+; sld_inversion_mask_length                       ; 35                                  ; Untyped        ;
+; sld_inversion_mask                              ; 00000000000000000000000000000000000 ; Untyped        ;
+; sld_power_up_trigger                            ; 0                                   ; Untyped        ;
+; SLD_STATE_FLOW_MGR_ENTITY                       ; state_flow_mgr_entity.vhd           ; String         ;
+; sld_state_flow_use_generated                    ; 0                                   ; Untyped        ;
+; sld_current_resource_width                      ; 1                                   ; Untyped        ;
+; sld_attribute_mem_mode                          ; OFF                                 ; Untyped        ;
+; sld_storage_qualifier_bits                      ; 3                                   ; Untyped        ;
+; SLD_STORAGE_QUALIFIER_GAP_RECORD                ; 0                                   ; Signed Integer ;
+; SLD_STORAGE_QUALIFIER_MODE                      ; OFF                                 ; String         ;
+; SLD_STORAGE_QUALIFIER_ENABLE_ADVANCED_CONDITION ; 0                                   ; Signed Integer ;
+; sld_storage_qualifier_inversion_mask_length     ; 0                                   ; Untyped        ;
+; SLD_STORAGE_QUALIFIER_ADVANCED_CONDITION_ENTITY ; basic                               ; String         ;
+; SLD_STORAGE_QUALIFIER_PIPELINE                  ; 0                                   ; Signed Integer ;
+; SLD_CREATE_MONITOR_INTERFACE                    ; 0                                   ; Signed Integer ;
+; SLD_USE_JTAG_SIGNAL_ADAPTER                     ; 1                                   ; Signed Integer ;
++-------------------------------------------------+-------------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -829,47 +709,51 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Mar 05 09:59:05 2025
+    Info: Processing started: Wed Mar 26 09:23:52 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SCOMP -c SCOMP
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file hex_disp.vhd
-    Info (12022): Found design unit 1: HEX_DISP-a File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/HEX_DISP.vhd Line: 17
-    Info (12023): Found entity 1: HEX_DISP File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/HEX_DISP.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file dig_out.vhd
-    Info (12022): Found design unit 1: DIG_OUT-a File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/DIG_OUT.vhd Line: 26
-    Info (12023): Found entity 1: DIG_OUT File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/DIG_OUT.vhd Line: 16
-Info (12021): Found 2 design units, including 1 entities, in source file dig_in.vhd
-    Info (12022): Found design unit 1: DIG_IN-a File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/DIG_IN.vhd Line: 19
-    Info (12023): Found entity 1: DIG_IN File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/DIG_IN.vhd Line: 10
-Info (12021): Found 2 design units, including 1 entities, in source file clk_div.vhd
-    Info (12022): Found design unit 1: clk_div-a File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/clk_div.vhd Line: 26
-    Info (12023): Found entity 1: clk_div File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/clk_div.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file timer.vhd
-    Info (12022): Found design unit 1: TIMER-a File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/TIMER.vhd Line: 27
-    Info (12023): Found entity 1: TIMER File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/TIMER.vhd Line: 17
+    Info (12022): Found design unit 1: TIMER-a File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/TIMER.vhd Line: 27
+    Info (12023): Found entity 1: TIMER File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/TIMER.vhd Line: 17
+Info (12021): Found 2 design units, including 1 entities, in source file hex_disp.vhd
+    Info (12022): Found design unit 1: HEX_DISP-a File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/HEX_DISP.vhd Line: 17
+    Info (12023): Found entity 1: HEX_DISP File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/HEX_DISP.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file dig_out.vhd
+    Info (12022): Found design unit 1: DIG_OUT-a File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/DIG_OUT.vhd Line: 27
+    Info (12023): Found entity 1: DIG_OUT File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/DIG_OUT.vhd Line: 16
+Info (12021): Found 2 design units, including 1 entities, in source file dig_in.vhd
+    Info (12022): Found design unit 1: DIG_IN-a File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/DIG_IN.vhd Line: 19
+    Info (12023): Found entity 1: DIG_IN File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/DIG_IN.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file clk_div.vhd
+    Info (12022): Found design unit 1: clk_div-a File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/clk_div.vhd Line: 26
+    Info (12023): Found entity 1: clk_div File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/clk_div.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file io_decoder.vhd
-    Info (12022): Found design unit 1: IO_DECODER-a File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/IO_DECODER.vhd Line: 27
-    Info (12023): Found entity 1: IO_DECODER File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/IO_DECODER.vhd Line: 9
+    Info (12022): Found design unit 1: IO_DECODER-a File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/IO_DECODER.vhd Line: 24
+    Info (12023): Found entity 1: IO_DECODER File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/IO_DECODER.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file scomp.vhd
-    Info (12022): Found design unit 1: SCOMP-a File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/SCOMP.vhd Line: 33
-    Info (12023): Found entity 1: SCOMP File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/SCOMP.vhd Line: 16
+    Info (12022): Found design unit 1: SCOMP-a File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/SCOMP.vhd Line: 34
+    Info (12023): Found entity 1: SCOMP File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/SCOMP.vhd Line: 16
 Info (12021): Found 1 design units, including 1 entities, in source file scomp_system.bdf
     Info (12023): Found entity 1: SCOMP_System
 Info (12021): Found 1 design units, including 1 entities, in source file hex_disp_6.bdf
     Info (12023): Found entity 1: HEX_DISP_6
 Info (12021): Found 2 design units, including 1 entities, in source file pll_main.vhd
-    Info (12022): Found design unit 1: PLL_main-rtl File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/PLL_main.vhd Line: 20
-    Info (12023): Found entity 1: PLL_main File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/PLL_main.vhd Line: 11
+    Info (12022): Found design unit 1: PLL_main-rtl File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/PLL_main.vhd Line: 21
+    Info (12023): Found entity 1: PLL_main File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/PLL_main.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file pll_main/pll_main_0002.v
-    Info (12023): Found entity 1: PLL_main_0002 File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/PLL_main/PLL_main_0002.v Line: 2
+    Info (12023): Found entity 1: PLL_main_0002 File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/PLL_main/PLL_main_0002.v Line: 2
+Warning (12019): Can't analyze file -- file ExternalMemory.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file ledcontroller.vhd
+    Info (12022): Found design unit 1: LEDController-a File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/LEDController.vhd Line: 25
+    Info (12023): Found entity 1: LEDController File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/LEDController.vhd Line: 15
 Info (12127): Elaborating entity "SCOMP_System" for the top level hierarchy
 Info (12128): Elaborating entity "HEX_DISP_6" for hierarchy "HEX_DISP_6:inst9"
 Info (12128): Elaborating entity "HEX_DISP" for hierarchy "HEX_DISP_6:inst9|HEX_DISP:inst1"
 Info (12128): Elaborating entity "IO_DECODER" for hierarchy "IO_DECODER:inst3"
 Info (12128): Elaborating entity "SCOMP" for hierarchy "SCOMP:inst"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component" File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/SCOMP.vhd Line: 63
-Info (12130): Elaborated megafunction instantiation "SCOMP:inst|altsyncram:altsyncram_component" File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/SCOMP.vhd Line: 63
-Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/SCOMP.vhd Line: 63
+Info (12128): Elaborating entity "altsyncram" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component" File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/SCOMP.vhd Line: 70
+Info (12130): Elaborated megafunction instantiation "SCOMP:inst|altsyncram:altsyncram_component" File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/SCOMP.vhd Line: 70
+Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/SCOMP.vhd Line: 70
     Info (12134): Parameter "address_aclr_a" = "UNUSED"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -883,14 +767,14 @@ Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_compon
     Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
-    Info (12134): Parameter "intended_device_family" = "CYCLONE V"
+    Info (12134): Parameter "intended_device_family" = "MAX 10"
     Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
     Info (12134): Parameter "enable_ecc" = "FALSE"
     Info (12134): Parameter "implement_in_les" = "OFF"
     Info (12134): Parameter "indata_aclr_a" = "UNUSED"
     Info (12134): Parameter "indata_aclr_b" = "NONE"
     Info (12134): Parameter "indata_reg_b" = "CLOCK1"
-    Info (12134): Parameter "init_file" = "Game.mif"
+    Info (12134): Parameter "init_file" = "NewLEDsTest.mif"
     Info (12134): Parameter "init_file_layout" = "PORT_A"
     Info (12134): Parameter "maximum_depth" = "0"
     Info (12134): Parameter "numwords_a" = "2048"
@@ -920,43 +804,50 @@ Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_compon
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_i424.tdf
-    Info (12023): Found entity 1: altsyncram_i424 File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/db/altsyncram_i424.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_i424" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component|altsyncram_i424:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "LPM_CLSHIFT" for hierarchy "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/SCOMP.vhd Line: 90
-Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/SCOMP.vhd Line: 90
-Info (12133): Instantiated megafunction "SCOMP:inst|LPM_CLSHIFT:shifter" with the following parameter: File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/SCOMP.vhd Line: 90
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_at24.tdf
+    Info (12023): Found entity 1: altsyncram_at24 File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/db/altsyncram_at24.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_at24" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component|altsyncram_at24:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Critical Warning (127003): Can't find Memory Initialization File or Hexadecimal (Intel-Format) File C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/NewLEDsTest.mif -- setting all initial values to 0 File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/SCOMP.vhd Line: 70
+Info (12128): Elaborating entity "LPM_CLSHIFT" for hierarchy "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/SCOMP.vhd Line: 97
+Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/SCOMP.vhd Line: 97
+Info (12133): Instantiated megafunction "SCOMP:inst|LPM_CLSHIFT:shifter" with the following parameter: File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/SCOMP.vhd Line: 97
     Info (12134): Parameter "LPM_WIDTH" = "16"
     Info (12134): Parameter "LPM_WIDTHDIST" = "4"
     Info (12134): Parameter "LPM_SHIFTTYPE" = "arithmetic"
     Info (12134): Parameter "LPM_TYPE" = "LPM_CLSHIFT"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_clshift_fuc.tdf
-    Info (12023): Found entity 1: lpm_clshift_fuc File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/db/lpm_clshift_fuc.tdf Line: 23
+    Info (12023): Found entity 1: lpm_clshift_fuc File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/db/lpm_clshift_fuc.tdf Line: 23
 Info (12128): Elaborating entity "lpm_clshift_fuc" for hierarchy "SCOMP:inst|LPM_CLSHIFT:shifter|lpm_clshift_fuc:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_clshift.tdf Line: 54
-Info (12128): Elaborating entity "LPM_BUSTRI" for hierarchy "SCOMP:inst|LPM_BUSTRI:io_bus" File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/SCOMP.vhd Line: 117
-Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_BUSTRI:io_bus" File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/SCOMP.vhd Line: 117
-Info (12133): Instantiated megafunction "SCOMP:inst|LPM_BUSTRI:io_bus" with the following parameter: File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/SCOMP.vhd Line: 117
+Info (12128): Elaborating entity "LPM_BUSTRI" for hierarchy "SCOMP:inst|LPM_BUSTRI:io_bus" File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/SCOMP.vhd Line: 124
+Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_BUSTRI:io_bus" File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/SCOMP.vhd Line: 124
+Info (12133): Instantiated megafunction "SCOMP:inst|LPM_BUSTRI:io_bus" with the following parameter: File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/SCOMP.vhd Line: 124
     Info (12134): Parameter "LPM_WIDTH" = "16"
     Info (12134): Parameter "LPM_TYPE" = "LPM_BUSTRI"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
 Info (12128): Elaborating entity "PLL_main" for hierarchy "PLL_main:inst1"
-Info (12128): Elaborating entity "PLL_main_0002" for hierarchy "PLL_main:inst1|PLL_main_0002:pll_main_inst" File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/PLL_main.vhd Line: 32
-Info (12128): Elaborating entity "altera_pll" for hierarchy "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/PLL_main/PLL_main_0002.v Line: 85
+Info (12128): Elaborating entity "PLL_main_0002" for hierarchy "PLL_main:inst1|PLL_main_0002:pll_main_inst" File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/PLL_main.vhd Line: 35
+Warning (10034): Output port "outclk_1" at PLL_main_0002.v(14) has no driver File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/PLL_main/PLL_main_0002.v Line: 14
+Info (12128): Elaborating entity "altera_pll" for hierarchy "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/PLL_main/PLL_main_0002.v Line: 238
+Warning (10034): Output port "lvds_clk" at altera_pll.v(320) has no driver File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 320
+Warning (10034): Output port "loaden" at altera_pll.v(321) has no driver File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 321
+Warning (10034): Output port "extclk_out" at altera_pll.v(322) has no driver File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 322
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/PLL_main/PLL_main_0002.v Line: 85
-Info (12133): Instantiated megafunction "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/PLL_main/PLL_main_0002.v Line: 85
+Info (12130): Elaborated megafunction instantiation "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/PLL_main/PLL_main_0002.v Line: 238
+Info (12133): Instantiated megafunction "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/PLL_main/PLL_main_0002.v Line: 238
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
+    Info (12134): Parameter "pll_fractional_cout" = "32"
+    Info (12134): Parameter "pll_dsm_out_sel" = "1st_order"
     Info (12134): Parameter "operation_mode" = "direct"
-    Info (12134): Parameter "number_of_clocks" = "1"
-    Info (12134): Parameter "output_clock_frequency0" = "10.000000 MHz"
+    Info (12134): Parameter "number_of_clocks" = "3"
+    Info (12134): Parameter "output_clock_frequency0" = "12.000000 MHz"
     Info (12134): Parameter "phase_shift0" = "0 ps"
     Info (12134): Parameter "duty_cycle0" = "50"
-    Info (12134): Parameter "output_clock_frequency1" = "0 MHz"
+    Info (12134): Parameter "output_clock_frequency1" = "1.200000 MHz"
     Info (12134): Parameter "phase_shift1" = "0 ps"
     Info (12134): Parameter "duty_cycle1" = "50"
-    Info (12134): Parameter "output_clock_frequency2" = "0 MHz"
+    Info (12134): Parameter "output_clock_frequency2" = "100.000000 MHz"
     Info (12134): Parameter "phase_shift2" = "0 ps"
     Info (12134): Parameter "duty_cycle2" = "50"
     Info (12134): Parameter "output_clock_frequency3" = "0 MHz"
@@ -1004,60 +895,246 @@ Info (12133): Instantiated megafunction "PLL_main:inst1|PLL_main_0002:pll_main_i
     Info (12134): Parameter "output_clock_frequency17" = "0 MHz"
     Info (12134): Parameter "phase_shift17" = "0 ps"
     Info (12134): Parameter "duty_cycle17" = "50"
-    Info (12134): Parameter "pll_type" = "General"
+    Info (12134): Parameter "pll_type" = "Cyclone V"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "TIMER" for hierarchy "TIMER:inst4"
-Warning (10631): VHDL Process Statement warning at TIMER.vhd(59): inferring latch(es) for signal or variable "IO_COUNT", which holds its previous value in one or more paths through the process File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[0]" at TIMER.vhd(59) File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[1]" at TIMER.vhd(59) File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[2]" at TIMER.vhd(59) File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[3]" at TIMER.vhd(59) File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[4]" at TIMER.vhd(59) File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[5]" at TIMER.vhd(59) File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[6]" at TIMER.vhd(59) File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[7]" at TIMER.vhd(59) File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[8]" at TIMER.vhd(59) File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[9]" at TIMER.vhd(59) File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[10]" at TIMER.vhd(59) File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[11]" at TIMER.vhd(59) File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[12]" at TIMER.vhd(59) File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[13]" at TIMER.vhd(59) File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[14]" at TIMER.vhd(59) File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[15]" at TIMER.vhd(59) File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/TIMER.vhd Line: 59
-Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:inst5"
+    Info (12134): Parameter "m_cnt_hi_div" = "3"
+    Info (12134): Parameter "m_cnt_lo_div" = "3"
+    Info (12134): Parameter "n_cnt_hi_div" = "256"
+    Info (12134): Parameter "n_cnt_lo_div" = "256"
+    Info (12134): Parameter "m_cnt_bypass_en" = "false"
+    Info (12134): Parameter "n_cnt_bypass_en" = "true"
+    Info (12134): Parameter "m_cnt_odd_div_duty_en" = "false"
+    Info (12134): Parameter "n_cnt_odd_div_duty_en" = "false"
+    Info (12134): Parameter "c_cnt_hi_div0" = "13"
+    Info (12134): Parameter "c_cnt_lo_div0" = "12"
+    Info (12134): Parameter "c_cnt_prst0" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst0" = "0"
+    Info (12134): Parameter "c_cnt_in_src0" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en0" = "false"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en0" = "true"
+    Info (12134): Parameter "c_cnt_hi_div1" = "125"
+    Info (12134): Parameter "c_cnt_lo_div1" = "125"
+    Info (12134): Parameter "c_cnt_prst1" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst1" = "0"
+    Info (12134): Parameter "c_cnt_in_src1" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en1" = "false"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en1" = "false"
+    Info (12134): Parameter "c_cnt_hi_div2" = "2"
+    Info (12134): Parameter "c_cnt_lo_div2" = "1"
+    Info (12134): Parameter "c_cnt_prst2" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst2" = "0"
+    Info (12134): Parameter "c_cnt_in_src2" = "cscd_clk"
+    Info (12134): Parameter "c_cnt_bypass_en2" = "false"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en2" = "true"
+    Info (12134): Parameter "c_cnt_hi_div3" = "1"
+    Info (12134): Parameter "c_cnt_lo_div3" = "1"
+    Info (12134): Parameter "c_cnt_prst3" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst3" = "0"
+    Info (12134): Parameter "c_cnt_in_src3" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en3" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en3" = "false"
+    Info (12134): Parameter "c_cnt_hi_div4" = "1"
+    Info (12134): Parameter "c_cnt_lo_div4" = "1"
+    Info (12134): Parameter "c_cnt_prst4" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst4" = "0"
+    Info (12134): Parameter "c_cnt_in_src4" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en4" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en4" = "false"
+    Info (12134): Parameter "c_cnt_hi_div5" = "1"
+    Info (12134): Parameter "c_cnt_lo_div5" = "1"
+    Info (12134): Parameter "c_cnt_prst5" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst5" = "0"
+    Info (12134): Parameter "c_cnt_in_src5" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en5" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en5" = "false"
+    Info (12134): Parameter "c_cnt_hi_div6" = "1"
+    Info (12134): Parameter "c_cnt_lo_div6" = "1"
+    Info (12134): Parameter "c_cnt_prst6" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst6" = "0"
+    Info (12134): Parameter "c_cnt_in_src6" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en6" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en6" = "false"
+    Info (12134): Parameter "c_cnt_hi_div7" = "1"
+    Info (12134): Parameter "c_cnt_lo_div7" = "1"
+    Info (12134): Parameter "c_cnt_prst7" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst7" = "0"
+    Info (12134): Parameter "c_cnt_in_src7" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en7" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en7" = "false"
+    Info (12134): Parameter "c_cnt_hi_div8" = "1"
+    Info (12134): Parameter "c_cnt_lo_div8" = "1"
+    Info (12134): Parameter "c_cnt_prst8" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst8" = "0"
+    Info (12134): Parameter "c_cnt_in_src8" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en8" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en8" = "false"
+    Info (12134): Parameter "c_cnt_hi_div9" = "1"
+    Info (12134): Parameter "c_cnt_lo_div9" = "1"
+    Info (12134): Parameter "c_cnt_prst9" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst9" = "0"
+    Info (12134): Parameter "c_cnt_in_src9" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en9" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en9" = "false"
+    Info (12134): Parameter "c_cnt_hi_div10" = "1"
+    Info (12134): Parameter "c_cnt_lo_div10" = "1"
+    Info (12134): Parameter "c_cnt_prst10" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst10" = "0"
+    Info (12134): Parameter "c_cnt_in_src10" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en10" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en10" = "false"
+    Info (12134): Parameter "c_cnt_hi_div11" = "1"
+    Info (12134): Parameter "c_cnt_lo_div11" = "1"
+    Info (12134): Parameter "c_cnt_prst11" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst11" = "0"
+    Info (12134): Parameter "c_cnt_in_src11" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en11" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en11" = "false"
+    Info (12134): Parameter "c_cnt_hi_div12" = "1"
+    Info (12134): Parameter "c_cnt_lo_div12" = "1"
+    Info (12134): Parameter "c_cnt_prst12" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst12" = "0"
+    Info (12134): Parameter "c_cnt_in_src12" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en12" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en12" = "false"
+    Info (12134): Parameter "c_cnt_hi_div13" = "1"
+    Info (12134): Parameter "c_cnt_lo_div13" = "1"
+    Info (12134): Parameter "c_cnt_prst13" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst13" = "0"
+    Info (12134): Parameter "c_cnt_in_src13" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en13" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en13" = "false"
+    Info (12134): Parameter "c_cnt_hi_div14" = "1"
+    Info (12134): Parameter "c_cnt_lo_div14" = "1"
+    Info (12134): Parameter "c_cnt_prst14" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst14" = "0"
+    Info (12134): Parameter "c_cnt_in_src14" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en14" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en14" = "false"
+    Info (12134): Parameter "c_cnt_hi_div15" = "1"
+    Info (12134): Parameter "c_cnt_lo_div15" = "1"
+    Info (12134): Parameter "c_cnt_prst15" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst15" = "0"
+    Info (12134): Parameter "c_cnt_in_src15" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en15" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en15" = "false"
+    Info (12134): Parameter "c_cnt_hi_div16" = "1"
+    Info (12134): Parameter "c_cnt_lo_div16" = "1"
+    Info (12134): Parameter "c_cnt_prst16" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst16" = "0"
+    Info (12134): Parameter "c_cnt_in_src16" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en16" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en16" = "false"
+    Info (12134): Parameter "c_cnt_hi_div17" = "1"
+    Info (12134): Parameter "c_cnt_lo_div17" = "1"
+    Info (12134): Parameter "c_cnt_prst17" = "1"
+    Info (12134): Parameter "c_cnt_ph_mux_prst17" = "0"
+    Info (12134): Parameter "c_cnt_in_src17" = "ph_mux_clk"
+    Info (12134): Parameter "c_cnt_bypass_en17" = "true"
+    Info (12134): Parameter "c_cnt_odd_div_duty_en17" = "false"
+    Info (12134): Parameter "pll_vco_div" = "2"
+    Info (12134): Parameter "pll_cp_current" = "20"
+    Info (12134): Parameter "pll_bwctrl" = "2000"
+    Info (12134): Parameter "pll_output_clk_frequency" = "300.0 MHz"
+    Info (12134): Parameter "pll_fractional_division" = "1"
+    Info (12134): Parameter "mimic_fbclk_type" = "none"
+    Info (12134): Parameter "pll_fbclk_mux_1" = "glb"
+    Info (12134): Parameter "pll_fbclk_mux_2" = "m_cnt"
+    Info (12134): Parameter "pll_m_cnt_in_src" = "ph_mux_clk"
+    Info (12134): Parameter "pll_slf_rst" = "false"
+Info (12128): Elaborating entity "dps_extra_kick" for hierarchy "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|dps_extra_kick:dps_extra_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 769
+Info (12131): Elaborated megafunction instantiation "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|dps_extra_kick:dps_extra_inst", which is child of megafunction instantiation "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 769
+Info (12128): Elaborating entity "dprio_init" for hierarchy "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|dprio_init:dprio_init_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 784
+Info (12131): Elaborated megafunction instantiation "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|dprio_init:dprio_init_inst", which is child of megafunction instantiation "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 784
+Info (12128): Elaborating entity "altera_pll_dps_lcell_comb" for hierarchy "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 1961
+Info (12131): Elaborated megafunction instantiation "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_0", which is child of megafunction instantiation "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 1961
+Info (12128): Elaborating entity "altera_pll_dps_lcell_comb" for hierarchy "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_1" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 1972
+Info (12131): Elaborated megafunction instantiation "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_1", which is child of megafunction instantiation "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 1972
+Info (12128): Elaborating entity "altera_pll_dps_lcell_comb" for hierarchy "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_2" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 1983
+Info (12131): Elaborated megafunction instantiation "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_2", which is child of megafunction instantiation "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 1983
+Info (12128): Elaborating entity "altera_pll_dps_lcell_comb" for hierarchy "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_3" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 1994
+Info (12131): Elaborated megafunction instantiation "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_3", which is child of megafunction instantiation "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 1994
+Info (12128): Elaborating entity "altera_pll_dps_lcell_comb" for hierarchy "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_4" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 2005
+Info (12131): Elaborated megafunction instantiation "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_4", which is child of megafunction instantiation "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 2005
+Info (12128): Elaborating entity "altera_cyclonev_pll" for hierarchy "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 2224
+Warning (10034): Output port "extclk" at altera_cyclonev_pll.v(632) has no driver File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_cyclonev_pll.v Line: 632
+Warning (10034): Output port "clkout[0]" at altera_cyclonev_pll.v(637) has no driver File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_cyclonev_pll.v Line: 637
+Warning (10034): Output port "loaden" at altera_cyclonev_pll.v(641) has no driver File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_cyclonev_pll.v Line: 641
+Warning (10034): Output port "lvdsclk" at altera_cyclonev_pll.v(642) has no driver File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_cyclonev_pll.v Line: 642
+Info (12131): Elaborated megafunction instantiation "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll", which is child of megafunction instantiation "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 2224
+Info (12128): Elaborating entity "altera_cyclonev_pll_base" for hierarchy "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll|altera_cyclonev_pll_base:fpll_0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_cyclonev_pll.v Line: 1153
+Info (12131): Elaborated megafunction instantiation "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll|altera_cyclonev_pll_base:fpll_0", which is child of megafunction instantiation "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_cyclonev_pll.v Line: 1153
 Info (12128): Elaborating entity "DIG_IN" for hierarchy "DIG_IN:inst7"
-Info (12128): Elaborating entity "DIG_OUT" for hierarchy "DIG_OUT:inst6"
-Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13048): Converted tri-state node "IO_DATA[15]" into a selector File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[14]" into a selector File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[13]" into a selector File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[12]" into a selector File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[11]" into a selector File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[10]" into a selector File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[9]" into a selector File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[8]" into a selector File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[7]" into a selector File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[6]" into a selector File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[5]" into a selector File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[4]" into a selector File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[3]" into a selector File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[2]" into a selector File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[1]" into a selector File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[0]" into a selector File: C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/HEX_DISP.vhd Line: 25
-Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 634 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 12 input pins
-    Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 553 logic cells
-    Info (21064): Implemented 16 RAM segments
-    Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4925 megabytes
-    Info: Processing ended: Wed Mar 05 09:59:22 2025
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:38
+Info (12128): Elaborating entity "TIMER" for hierarchy "TIMER:inst4"
+Warning (10631): VHDL Process Statement warning at TIMER.vhd(63): inferring latch(es) for signal or variable "IO_COUNT", which holds its previous value in one or more paths through the process File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/TIMER.vhd Line: 63
+Info (10041): Inferred latch for "IO_COUNT[0]" at TIMER.vhd(63) File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/TIMER.vhd Line: 63
+Info (10041): Inferred latch for "IO_COUNT[1]" at TIMER.vhd(63) File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/TIMER.vhd Line: 63
+Info (10041): Inferred latch for "IO_COUNT[2]" at TIMER.vhd(63) File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/TIMER.vhd Line: 63
+Info (10041): Inferred latch for "IO_COUNT[3]" at TIMER.vhd(63) File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/TIMER.vhd Line: 63
+Info (10041): Inferred latch for "IO_COUNT[4]" at TIMER.vhd(63) File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/TIMER.vhd Line: 63
+Info (10041): Inferred latch for "IO_COUNT[5]" at TIMER.vhd(63) File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/TIMER.vhd Line: 63
+Info (10041): Inferred latch for "IO_COUNT[6]" at TIMER.vhd(63) File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/TIMER.vhd Line: 63
+Info (10041): Inferred latch for "IO_COUNT[7]" at TIMER.vhd(63) File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/TIMER.vhd Line: 63
+Info (10041): Inferred latch for "IO_COUNT[8]" at TIMER.vhd(63) File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/TIMER.vhd Line: 63
+Info (10041): Inferred latch for "IO_COUNT[9]" at TIMER.vhd(63) File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/TIMER.vhd Line: 63
+Info (10041): Inferred latch for "IO_COUNT[10]" at TIMER.vhd(63) File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/TIMER.vhd Line: 63
+Info (10041): Inferred latch for "IO_COUNT[11]" at TIMER.vhd(63) File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/TIMER.vhd Line: 63
+Info (10041): Inferred latch for "IO_COUNT[12]" at TIMER.vhd(63) File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/TIMER.vhd Line: 63
+Info (10041): Inferred latch for "IO_COUNT[13]" at TIMER.vhd(63) File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/TIMER.vhd Line: 63
+Info (10041): Inferred latch for "IO_COUNT[14]" at TIMER.vhd(63) File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/TIMER.vhd Line: 63
+Info (10041): Inferred latch for "IO_COUNT[15]" at TIMER.vhd(63) File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/TIMER.vhd Line: 63
+Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:inst5"
+Info (12128): Elaborating entity "LEDController" for hierarchy "LEDController:inst6"
+Warning (12030): Port "extclk" on the entity instantiation of "cyclonev_pll" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 2224
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ke84.tdf
+    Info (12023): Found entity 1: altsyncram_ke84 File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/db/altsyncram_ke84.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_flc.tdf
+    Info (12023): Found entity 1: mux_flc File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/db/mux_flc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_vnf.tdf
+    Info (12023): Found entity 1: decode_vnf File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/db/decode_vnf.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_b7i.tdf
+    Info (12023): Found entity 1: cntr_b7i File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/db/cntr_b7i.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_a9c.tdf
+    Info (12023): Found entity 1: cmpr_a9c File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/db/cmpr_a9c.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_82j.tdf
+    Info (12023): Found entity 1: cntr_82j File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/db/cntr_82j.tdf Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_29i.tdf
+    Info (12023): Found entity 1: cntr_29i File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/db/cntr_29i.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_d9c.tdf
+    Info (12023): Found entity 1: cmpr_d9c File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/db/cmpr_d9c.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_kri.tdf
+    Info (12023): Found entity 1: cntr_kri File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/db/cntr_kri.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_99c.tdf
+    Info (12023): Found entity 1: cmpr_99c File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/db/cmpr_99c.tdf Line: 23
+Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
+Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
+Info (11172): 2025.03.26.09:24:13 Progress: Loading sldfd7bd03d/alt_sld_fab_wrapper_hw.tcl
+Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
+Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
+Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
+Info (11172): Presplit: "alt_sld_fab" instantiated altera_super_splitter "presplit"
+Info (11172): Splitter: "alt_sld_fab" instantiated altera_sld_splitter "splitter"
+Info (11172): Sldfabric: "alt_sld_fab" instantiated altera_sld_jtag_hub "sldfabric"
+Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification_hub "ident"
+Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
+Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldfd7bd03d/alt_sld_fab.v
+    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/db/ip/sldfd7bd03d/alt_sld_fab.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldfd7bd03d/submodules/alt_sld_fab_alt_sld_fab.v
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/db/ip/sldfd7bd03d/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldfd7bd03d/submodules/alt_sld_fab_alt_sld_fab_ident.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/db/ip/sldfd7bd03d/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldfd7bd03d/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/db/ip/sldfd7bd03d/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sldfd7bd03d/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/db/ip/sldfd7bd03d/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/db/ip/sldfd7bd03d/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldfd7bd03d/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/db/ip/sldfd7bd03d/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+Error (12009): Node "LED_EN" is missing source
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 12 warnings
+    Error: Peak virtual memory: 4906 megabytes
+    Error: Processing ended: Wed Mar 26 09:24:26 2025
+    Error: Elapsed time: 00:00:34
+    Error: Total CPU time (on all processors): 00:01:08
 
 
