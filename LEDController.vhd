@@ -24,18 +24,43 @@ END LEDController;
 
 ARCHITECTURE a OF LEDController IS
 BEGIN
-    PROCESS (RESETN, CS)
+    PROCESS (RESETN, CS, WRITE_EN, IO_DATA)
     BEGIN
         IF (RESETN = '0') THEN
             -- Turn off LEDs at reset (a nice usability feature)
             LEDs <= "0000000000";
         ELSIF (RISING_EDGE(CS)) THEN
             IF WRITE_EN = '1' THEN
-                -- If SCOMP is sending data to this peripheral,
-                -- use that data directly as the on/off values
-                -- for the LEDs.
-                LEDs <= IO_DATA(9 DOWNTO 0);
-            END IF;
+				    CASE IO_DATA IS
+					     WHEN "0000000001000001" => LEDs <= "1011000000";
+                    WHEN "0000000001000010" => LEDs <= "1101010100";
+                    WHEN "0000000001000011" => LEDs <= "1101011010";
+                    WHEN "0000000001000100" => LEDs <= "1101010000";
+                    WHEN "0000000001000101" => LEDs <= "1000000000";
+                    WHEN "0000000001000110" => LEDs <= "1010110100";
+                    WHEN "0000000001000111" => LEDs <= "1101101000";
+                    WHEN "0000000001001000" => LEDs <= "1010101000";
+                    WHEN "0000000001001001" => LEDs <= "1010000000";
+                    WHEN "0000000001001010" => LEDs <= "1101101101";
+                    WHEN "0000000001001011" => LEDs <= "1101011000";
+                    WHEN "0000000001001100" => LEDs <= "1010110100";
+                    WHEN "0000000001001101" => LEDs <= "1101100000";
+                    WHEN "0000000001001110" => LEDs <= "1101000000";
+                    WHEN "0000000001001111" => LEDs <= "1101101100";
+                    WHEN "0000000001010000" => LEDs <= "1011011010";
+                    WHEN "0000000001010001" => LEDs <= "1101101011";
+                    WHEN "0000000001010010" => LEDs <= "1011010000";
+                    WHEN "0000000001010011" => LEDs <= "1010100000";
+                    WHEN "0000000001010100" => LEDs <= "1100000000";
+                    WHEN "0000000001010101" => LEDs <= "1010110000";
+                    WHEN "0000000001010110" => LEDs <= "1010101100";
+                    WHEN "0000000001010111" => LEDs <= "1011011000";
+                    WHEN "0000000001011000" => LEDs <= "1101010110";
+                    WHEN "0000000001011001" => LEDs <= "1101011011";
+                    WHEN "0000000001011010" => LEDs <= "1101101010";
+                    WHEN OTHERS => LEDs <= "0000000000";
+                END CASE;
+			  END IF;
         END IF;
     END PROCESS;
 END a;
