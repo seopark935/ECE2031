@@ -1,11 +1,33 @@
-; An empty ASM program ...
+						ORG 0
+WAIT_TO_START:
+						IN Switches
+						JZERO BEGIN
+						JUMP WAIT_TO_START ; wait for all switches to be down to start
+BEGIN:
+						LOADI 65
+						STORE ASCII ; initialize ascii value
+CHECK_SWITCH_UP:
+						IN Switches
+						JZERO CHECK_SWITCH_UP ; wait for switch(es) to be raised
+SWITCHES_UP:
+						LOAD ASCII
+						OUT SevSeg ; display character on 7 segment display
+						OUT Morse
+						IN Switches
+						JZERO NEXT_CHARACTER ; if all switches lowered, go to SWITCHES_DOWN
+						JUMP SWITCHES_UP ; wait for user to lower all switches
+NEXT_CHARACTER:
+						LOAD ASCII 
+						ADD 1 ; go to next character
+						StORE ASCII
+						SUB Last_Val ; check if it is last value
+						JPOS BEGIN ;; restart if past last value
+						JUMP CHECK_SWITCH_UP
 
-ORG 0
-	JUMP 0
-	
-; IO address constants
-Switches:  EQU 000
-Timer:     EQU 002
-Hex0:      EQU 004
-Hex1:      EQU 005
-NewLEDs:   EQU &H...
+;; VARIABLES AND STUFF
+ASCII: DW 0 ;; stores current ascii value
+Switches: EQU 000
+Timer: EQU 002
+Morse: EQU 032
+SevSeg: EQU 007 
+Last_Val: DW &H5A

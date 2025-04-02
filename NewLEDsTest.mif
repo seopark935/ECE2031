@@ -1,0 +1,30 @@
+WIDTH=16;
+DEPTH=2048;
+
+ADDRESS_RADIX=HEX;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+0000: 9000; -- 						IN Switches
+0001: 4003; -- 						JZERO BEGIN
+0002: 2800; -- 						JUMP WAIT_TO_START ; wait for all switches to be down to start
+0003: B841; -- 						LOADI 65
+0004: 1013; -- 						STORE ASCII ; initialize ascii value
+0005: 9000; -- 						IN Switches
+0006: 4005; -- 						JZERO CHECK_SWITCH_UP ; wait for switch(es) to be raised
+0007: 0813; -- 						LOAD ASCII
+0008: 9807; -- 						OUT SevSeg ; display character on 7 segment display
+0009: 9820; -- 						OUT Morse
+000A: 9000; -- 						IN Switches
+000B: 400D; -- 						JZERO NEXT_CHARACTER ; if all switches lowered, go to SWITCHES_DOWN
+000C: 2807; -- 						JUMP SWITCHES_UP ; wait for user to lower all switches
+000D: 0813; -- 						LOAD ASCII 
+000E: 1801; -- 						ADD 1 ; go to next character
+000F: 1013; -- 						StORE ASCII
+0010: 2014; -- 						SUB Last_Val ; check if it is last value
+0011: 3803; -- 						JPOS BEGIN ;; restart if past last value
+0012: 2805; -- 						JUMP CHECK_SWITCH_UP
+0013: 0000; -- ASCII: DW 0 ;; stores current ascii value
+0014: 005A; -- Last_Val: DW &H5A
+[0015..07FF] : 0000; -- [empty memory]
+END;

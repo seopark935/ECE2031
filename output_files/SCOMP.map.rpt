@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SCOMP
-Mon Mar 31 15:32:58 2025
+Wed Apr 02 10:45:33 2025
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -70,7 +70,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Mar 31 15:32:58 2025       ;
+; Analysis & Synthesis Status     ; Successful - Wed Apr 02 10:45:33 2025       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; SCOMP                                       ;
 ; Top-level Entity Name           ; SCOMP_System                                ;
@@ -222,6 +222,7 @@ https://fpgasoftware.intel.com/eula.
 ; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                          ;             ;
 ; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                        ;             ;
 ; db/altsyncram_at24.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/john4/Documents/Github/ECE2031/db/altsyncram_at24.tdf                                             ;             ;
+; NewLEDsTest.mif                                                    ; yes             ; Auto-Found Memory Initialization File        ; C:/Users/john4/Documents/Github/ECE2031/NewLEDsTest.mif                                                    ;             ;
 ; lpm_clshift.tdf                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_clshift.tdf                                     ;             ;
 ; db/lpm_clshift_fuc.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/john4/Documents/Github/ECE2031/db/lpm_clshift_fuc.tdf                                             ;             ;
 ; lpm_bustri.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_bustri.tdf                                      ;             ;
@@ -385,14 +386,14 @@ https://fpgasoftware.intel.com/eula.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                                           ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
-; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
-; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_at24:auto_generated|ALTSYNCRAM                                                                                                                  ; AUTO ; Single Port      ; 2048         ; 16           ; --           ; --           ; 32768 ; None ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_ke84:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 4096         ; 3            ; 4096         ; 3            ; 12288 ; None ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                                                      ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-----------------+
+; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF             ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-----------------+
+; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_at24:auto_generated|ALTSYNCRAM                                                                                                                  ; AUTO ; Single Port      ; 2048         ; 16           ; --           ; --           ; 32768 ; NewLEDsTest.mif ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_ke84:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 4096         ; 3            ; 4096         ; 3            ; 12288 ; None            ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-----------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1243,7 +1244,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Mar 31 15:32:10 2025
+    Info: Processing started: Wed Apr 02 10:44:55 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SCOMP -c SCOMP
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file timer.vhd
@@ -1278,7 +1279,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file pll_mai
     Info (12023): Found entity 1: PLL_main_0002 File: C:/Users/john4/Documents/Github/ECE2031/PLL_main/PLL_main_0002.v Line: 2
 Warning (12019): Can't analyze file -- file ExternalMemory.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file ledcontroller.vhd
-    Info (12022): Found design unit 1: LEDController-a File: C:/Users/john4/Documents/Github/ECE2031/LEDController.vhd Line: 25
+    Info (12022): Found design unit 1: LEDController-a File: C:/Users/john4/Documents/Github/ECE2031/LEDController.vhd Line: 26
     Info (12023): Found entity 1: LEDController File: C:/Users/john4/Documents/Github/ECE2031/LEDController.vhd Line: 15
 Info (12127): Elaborating entity "SCOMP_System" for the top level hierarchy
 Info (12128): Elaborating entity "HEX_DISP_6" for hierarchy "HEX_DISP_6:inst9"
@@ -1341,7 +1342,6 @@ Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_compon
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_at24.tdf
     Info (12023): Found entity 1: altsyncram_at24 File: C:/Users/john4/Documents/Github/ECE2031/db/altsyncram_at24.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_at24" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component|altsyncram_at24:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Critical Warning (127003): Can't find Memory Initialization File or Hexadecimal (Intel-Format) File C:/Users/john4/Documents/Github/ECE2031/NewLEDsTest.mif -- setting all initial values to 0 File: C:/Users/john4/Documents/Github/ECE2031/SCOMP.vhd Line: 70
 Info (12128): Elaborating entity "LPM_CLSHIFT" for hierarchy "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/john4/Documents/Github/ECE2031/SCOMP.vhd Line: 97
 Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/john4/Documents/Github/ECE2031/SCOMP.vhd Line: 97
 Info (12133): Instantiated megafunction "SCOMP:inst|LPM_CLSHIFT:shifter" with the following parameter: File: C:/Users/john4/Documents/Github/ECE2031/SCOMP.vhd Line: 97
@@ -1641,7 +1641,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: C:/Users/john4/Documents/Github/ECE2031/db/cmpr_99c.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2025.03.31.15:32:37 Progress: Loading sldfd7bd03d/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2025.04.02.10:45:16 Progress: Loading sldfd7bd03d/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1704,10 +1704,10 @@ Info (21057): Implemented 1306 device resources after synthesis - the final reso
     Info (21059): Implemented 57 output pins
     Info (21061): Implemented 1210 logic cells
     Info (21064): Implemented 19 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 43 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 42 warnings
     Info: Peak virtual memory: 4972 megabytes
-    Info: Processing ended: Mon Mar 31 15:32:58 2025
-    Info: Elapsed time: 00:00:48
-    Info: Total CPU time (on all processors): 00:01:16
+    Info: Processing ended: Wed Apr 02 10:45:33 2025
+    Info: Elapsed time: 00:00:38
+    Info: Total CPU time (on all processors): 00:01:12
 
 
