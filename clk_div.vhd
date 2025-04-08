@@ -18,7 +18,8 @@ ENTITY clk_div IS
 		clock_100Hz      : OUT STD_LOGIC;
 		clock_32Hz       : OUT STD_LOGIC;
 		clock_10Hz       : OUT STD_LOGIC;
-		clock_4Hz        : OUT STD_LOGIC
+		clock_4Hz        : OUT STD_LOGIC;
+		clock_1Hz		  : OUT STD_LOGIC
 	);
 	
 END clk_div;
@@ -33,7 +34,8 @@ ARCHITECTURE a OF clk_div IS
 	SIGNAL count_100Hz      : INTEGER RANGE 0 TO half_freq/100;
 	SIGNAL count_32Hz       : INTEGER RANGE 0 TO half_freq/32; 
 	SIGNAL count_10Hz       : INTEGER RANGE 0 TO half_freq/10; 
-	SIGNAL count_4Hz        : INTEGER RANGE 0 TO half_freq/4; 
+	SIGNAL count_4Hz        : INTEGER RANGE 0 TO half_freq/4;
+	SIGNAL count_1Hz			: INTEGER RANGE 0 TO half_freq;
 	
 	SIGNAL clock_100kHz_int : STD_LOGIC; 
 	SIGNAL clock_10kHz_int  : STD_LOGIC; 
@@ -41,6 +43,7 @@ ARCHITECTURE a OF clk_div IS
 	SIGNAL clock_32Hz_int   : STD_LOGIC; 
 	SIGNAL clock_10Hz_int   : STD_LOGIC; 
 	SIGNAL clock_4Hz_int    : STD_LOGIC; 
+	SIGNAL clock_1Hz_int		: STD_LOGIC;
 	
 BEGIN
 	PROCESS 
@@ -53,6 +56,7 @@ BEGIN
 		clock_32Hz  <= clock_32Hz_int;
 		clock_10Hz  <= clock_10Hz_int;
 		clock_4Hz  <= clock_4Hz_int;
+		clock_1Hz <= clock_1Hz_int;
 
 	--
 		IF count_100kHz < (half_freq/100000-1) THEN
@@ -95,6 +99,13 @@ BEGIN
 		ELSE
 			count_4Hz <= 0;
 			clock_4Hz_int <= NOT(clock_4Hz_int);
+		END IF;
+		
+		IF count_1Hz < (half_freq - 1) THEN
+			count_1Hz <= count_1Hz + 1;
+		ELSE
+			count_1Hz <= 0;
+			clock_1Hz_int <= NOT(clock_1Hz_int);
 		END IF;
 	--
 		

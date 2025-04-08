@@ -1,5 +1,5 @@
 Flow report for SCOMP
-Wed Apr 02 10:56:32 2025
+Tue Apr 08 16:29:00 2025
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Apr 02 10:56:32 2025       ;
+; Flow Status                     ; Successful - Tue Apr 08 16:29:00 2025       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; SCOMP                                       ;
 ; Top-level Entity Name           ; SCOMP_System                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 527 / 41,910 ( 1 % )                        ;
-; Total registers                 ; 786                                         ;
+; Logic utilization (in ALMs)     ; 567 / 41,910 ( 1 % )                        ;
+; Total registers                 ; 773                                         ;
 ; Total pins                      ; 68 / 499 ( 14 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 45,056 / 5,662,720 ( < 1 % )                ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/02/2025 10:44:55 ;
+; Start date & time ; 04/08/2025 16:27:30 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; SCOMP               ;
 +-------------------+---------------------+
@@ -80,7 +80,7 @@ https://fpgasoftware.intel.com/eula.
 ; Assignment Name                     ; Value                                                  ; Default Value ; Entity Name  ; Section Id                        ;
 +-------------------------------------+--------------------------------------------------------+---------------+--------------+-----------------------------------+
 ; ADVANCED_PHYSICAL_OPTIMIZATION      ; Off                                                    ; On            ; --           ; --                                ;
-; COMPILER_SIGNATURE_ID               ; 91759546669.174360509530296                            ; --            ; --           ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 167510083024974.174414404919936                        ; --            ; --           ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                    ; --            ; --           ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                    ; --            ; --           ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                    ; --            ; --           ; eda_board_design_signal_integrity ;
@@ -146,12 +146,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:35     ; 1.0                     ; 4972 MB             ; 00:01:09                           ;
-; Fitter               ; 00:01:05     ; 1.1                     ; 6868 MB             ; 00:02:08                           ;
-; Assembler            ; 00:00:08     ; 1.0                     ; 4858 MB             ; 00:00:08                           ;
-; Timing Analyzer      ; 00:00:13     ; 1.8                     ; 5296 MB             ; 00:00:19                           ;
-; EDA Netlist Writer   ; 00:09:24     ; 1.0                     ; 4850 MB             ; 00:00:05                           ;
-; Total                ; 00:11:25     ; --                      ; --                  ; 00:03:49                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4950 MB             ; 00:00:40                           ;
+; Fitter               ; 00:00:46     ; 1.1                     ; 6877 MB             ; 00:01:40                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4849 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:07     ; 1.7                     ; 5298 MB             ; 00:00:12                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4848 MB             ; 00:00:03                           ;
+; Total                ; 00:01:24     ; --                      ; --                  ; 00:02:41                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

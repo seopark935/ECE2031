@@ -17,15 +17,16 @@ PORT(
     CS          : IN  STD_LOGIC;
     WRITE_EN    : IN  STD_LOGIC;
     RESETN      : IN  STD_LOGIC;
-	 CLK         : IN  STD_LOGIC;
+	 LED_CLK     : IN  STD_LOGIC;
     LEDs        : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-    IO_DATA     : IN  STD_LOGIC_VECTOR(15 DOWNTO 0)
+    IO_DATA     : IN  STD_LOGIC_VECTOR(14 DOWNTO 0);
+	 FLASH_EN	 : IN  STD_LOGIC
     );
 END LEDController;
 
 ARCHITECTURE a OF LEDController IS
 BEGIN
-    PROCESS (RESETN, CS, WRITE_EN, IO_DATA)
+    PROCESS (RESETN, CS, WRITE_EN, IO_DATA, LED_CLK)
     BEGIN
         IF (RESETN = '0') THEN
             -- Turn off LEDs at reset (a nice usability feature)
