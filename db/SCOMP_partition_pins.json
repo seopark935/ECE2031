@@ -212,7 +212,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[4]",
+					"name" : "SW[3]",
 					"strict" : false
 				},
 				{
@@ -220,11 +220,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[3]",
+					"name" : "SW[1]",
 					"strict" : false
 				},
 				{
-					"name" : "SW[1]",
+					"name" : "SW[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[5]",
 					"strict" : false
 				},
 				{
@@ -245,10 +249,6 @@
 				},
 				{
 					"name" : "SW[8]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[5]",
 					"strict" : false
 				}
 			]

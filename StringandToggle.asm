@@ -64,7 +64,7 @@
  ;; VARIABLES AND CONSTANTS
  Switches: EQU 000
  Timer: EQU 002
- LEDs: EQU 001 ; change to Morse
+ LEDs: EQU &H020 ; change to Morse
  Hex: EQU 004
  
  CurrAddr: DW ; current address when iterating through string
@@ -73,4 +73,4 @@
  Char3: DW &H45
  CharEnd: DW &H0 ; null byte
  ASCII: DW &H0
- Last_Val: DW &H5A
+ Last_Val: DW &H5B
