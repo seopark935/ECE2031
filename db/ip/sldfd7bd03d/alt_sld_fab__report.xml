@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
+<<<<<<< Updated upstream
  date="2025.03.26.09:24:22"
  outputDirectory="C:/Users/john4/Documents/ECE 2031/SCOMP_Project_Spring25/SCOMP_Project_Spring25/db/ip/sldfd7bd03d/">
+=======
+ date="2025.04.14.11:54:42"
+ outputDirectory="C:/Users/john4/Documents/Github/ECE2031/db/ip/sldfd7bd03d/">
+>>>>>>> Stashed changes
  <perimeter>
   <parameter
      name="AUTO_DEVICE_FAMILY"

@@ -1,0 +1,68 @@
+WIDTH=16;
+DEPTH=2048;
+
+ADDRESS_RADIX=HEX;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+0000: B800; --                     LOADI 0
+0001: 9820; --                     OUT LEDs
+0002: 9000; --                     IN Switches
+0003: 4005; --                     JZERO START
+0004: 2800; --                     JUMP WAIT_TO_START ; wait for all switches to be down to start
+0005: B800; -- 					LOADI 0
+0006: 9820; --                     OUT LEDs
+0007: 9000; --                     IN Switches
+0008: 6F00; --                     ADDI -256
+0009: 3005; --                     JNEG START ; if switches < 256, neither switch is raised
+000A: 6F00; --                     ADDI -256
+000B: 301D; --                     JNEG TOGGLE_MODE ; if switches < 512, switch 9 is not raised
+000C: B835; --                     LOADI Char1 ; starting address of string
+000D: 1034; --                     STORE CurrAddr
+000E: 7034; --                     ILOAD CurrAddr ; get current character
+000F: 4017; --                     JZERO END_STRING ; reached end of string, return to beginning
+0010: 9820; --                     OUT LEDs ; display to LEDs
+0011: 9804; --                     OUT Hex ; display to Hex
+0012: 802F; --                     CALL Delay ; delay for LED display
+0013: 0834; --                     LOAD CurrAddr
+0014: 6801; --                     ADDI 1
+0015: 1034; --                     STORE CurrAddr 
+0016: 280D; --                     JUMP LOOP_STRING
+0017: B800; -- 					LOADI 0
+0018: 9820; --                     OUT LEDs
+0019: 9000; --                     IN Switches
+001A: 6E00; --                     ADDI -512
+001B: 3005; --                     JNEG START
+001C: 2819; --                     JUMP END_STRING_LOOP
+001D: 9000; --                     IN Switches
+001E: 4839; --                     AND Mask
+001F: 6FBF; --                     ADDI -65
+0020: 302C; --                     JNEG INVALID_INPUT ; input is less than 65
+0021: 9000; --                     IN Switches
+0022: 4839; --                     AND Mask
+0023: 6FA6; --                     ADDI -90
+0024: 382C; --                     JPOS INVALID_INPUT ; input is greater than 90
+0025: 9000; --                    	IN Switches
+0026: 4839; --                     AND Mask
+0027: 9820; --                     OUT LEDs
+0028: 9000; --                     IN Switches
+0029: 483A; --                     AND Bit8
+002A: 4005; --                     JZERO START
+002B: 281D; --                     JUMP TOGGLE_MODE
+002C: B800; -- 					LOADI 0
+002D: 9820; --                     OUT LEDs ; turn off all LEDs
+002E: 2805; --                     JUMP START
+002F: 9802; --                     OUT Timer
+0030: 9002; --                     IN Timer
+0031: 6F9C; --                     ADDI -100 ;; change to -100 to account for morse code
+0032: 3030; --                     JNEG WAITING_LOOP
+0033: 8800; --                     RETURN
+0034: 0000; -- CurrAddr: DW ; current address when iterating through string
+0035: 0045; -- Char1: DW &H45 ; first character of string (address of string)
+0036: 0043; -- Char2: DW &H43 ; second character of string
+0037: 0045; -- Char3: DW &H45 ; third character of string
+0038: 0000; -- CharEnd: DW &H0 ; null byte to signify end of string
+0039: 00FF; -- Mask: DW &b0011111111 ; mask to get input for character select (switches[0:7])
+003A: 0100; -- Bit8: DW &b0100000000
+[003B..07FF] : 0000; -- [empty memory]
+END;

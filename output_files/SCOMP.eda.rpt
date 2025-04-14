@@ -1,5 +1,9 @@
 EDA Netlist Writer report for SCOMP
+<<<<<<< Updated upstream
 Wed Mar 05 10:04:21 2025
+=======
+Mon Apr 14 11:56:15 2025
+>>>>>>> Stashed changes
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -37,7 +41,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
+<<<<<<< Updated upstream
 ; EDA Netlist Writer Status ; Successful - Wed Mar 05 10:04:21 2025 ;
+=======
+; EDA Netlist Writer Status ; Successful - Mon Apr 14 11:56:15 2025 ;
+>>>>>>> Stashed changes
 ; Revision Name             ; SCOMP                                 ;
 ; Top-level Entity Name     ; SCOMP_System                          ;
 ; Family                    ; Cyclone V                             ;
@@ -81,13 +89,24 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+<<<<<<< Updated upstream
     Info: Processing started: Wed Mar 05 10:04:19 2025
+=======
+    Info: Processing started: Mon Apr 14 11:56:11 2025
+>>>>>>> Stashed changes
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off SCOMP -c SCOMP
 Info (204019): Generated file SCOMP.vo in folder "C:/Users/john4/Documents/ECE 2031/Lab 8/SCOMP_Lab8_Spring25/SCOMP_Lab8_Fall24/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
+<<<<<<< Updated upstream
     Info: Peak virtual memory: 4838 megabytes
     Info: Processing ended: Wed Mar 05 10:04:21 2025
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
+=======
+    Info: Peak virtual memory: 4848 megabytes
+    Info: Processing ended: Mon Apr 14 11:56:15 2025
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
+>>>>>>> Stashed changes
 
 

@@ -903,6 +903,7 @@ dbg_IR[15] <= IR[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component
+<<<<<<< Updated upstream
 wren_a => altsyncram_at24:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -939,6 +940,44 @@ address_b[0] => ~NO_FANOUT~
 addressstall_a => ~NO_FANOUT~
 addressstall_b => ~NO_FANOUT~
 clock0 => altsyncram_at24:auto_generated.clock0
+=======
+wren_a => altsyncram_lb24:auto_generated.wren_a
+rden_a => ~NO_FANOUT~
+wren_b => ~NO_FANOUT~
+rden_b => ~NO_FANOUT~
+data_a[0] => altsyncram_lb24:auto_generated.data_a[0]
+data_a[1] => altsyncram_lb24:auto_generated.data_a[1]
+data_a[2] => altsyncram_lb24:auto_generated.data_a[2]
+data_a[3] => altsyncram_lb24:auto_generated.data_a[3]
+data_a[4] => altsyncram_lb24:auto_generated.data_a[4]
+data_a[5] => altsyncram_lb24:auto_generated.data_a[5]
+data_a[6] => altsyncram_lb24:auto_generated.data_a[6]
+data_a[7] => altsyncram_lb24:auto_generated.data_a[7]
+data_a[8] => altsyncram_lb24:auto_generated.data_a[8]
+data_a[9] => altsyncram_lb24:auto_generated.data_a[9]
+data_a[10] => altsyncram_lb24:auto_generated.data_a[10]
+data_a[11] => altsyncram_lb24:auto_generated.data_a[11]
+data_a[12] => altsyncram_lb24:auto_generated.data_a[12]
+data_a[13] => altsyncram_lb24:auto_generated.data_a[13]
+data_a[14] => altsyncram_lb24:auto_generated.data_a[14]
+data_a[15] => altsyncram_lb24:auto_generated.data_a[15]
+data_b[0] => ~NO_FANOUT~
+address_a[0] => altsyncram_lb24:auto_generated.address_a[0]
+address_a[1] => altsyncram_lb24:auto_generated.address_a[1]
+address_a[2] => altsyncram_lb24:auto_generated.address_a[2]
+address_a[3] => altsyncram_lb24:auto_generated.address_a[3]
+address_a[4] => altsyncram_lb24:auto_generated.address_a[4]
+address_a[5] => altsyncram_lb24:auto_generated.address_a[5]
+address_a[6] => altsyncram_lb24:auto_generated.address_a[6]
+address_a[7] => altsyncram_lb24:auto_generated.address_a[7]
+address_a[8] => altsyncram_lb24:auto_generated.address_a[8]
+address_a[9] => altsyncram_lb24:auto_generated.address_a[9]
+address_a[10] => altsyncram_lb24:auto_generated.address_a[10]
+address_b[0] => ~NO_FANOUT~
+addressstall_a => ~NO_FANOUT~
+addressstall_b => ~NO_FANOUT~
+clock0 => altsyncram_lb24:auto_generated.clock0
+>>>>>>> Stashed changes
 clock1 => ~NO_FANOUT~
 clocken0 => ~NO_FANOUT~
 clocken1 => ~NO_FANOUT~
@@ -948,6 +987,7 @@ aclr0 => ~NO_FANOUT~
 aclr1 => ~NO_FANOUT~
 byteena_a[0] => ~NO_FANOUT~
 byteena_b[0] => ~NO_FANOUT~
+<<<<<<< Updated upstream
 q_a[0] <= altsyncram_at24:auto_generated.q_a[0]
 q_a[1] <= altsyncram_at24:auto_generated.q_a[1]
 q_a[2] <= altsyncram_at24:auto_generated.q_a[2]
@@ -964,13 +1004,35 @@ q_a[12] <= altsyncram_at24:auto_generated.q_a[12]
 q_a[13] <= altsyncram_at24:auto_generated.q_a[13]
 q_a[14] <= altsyncram_at24:auto_generated.q_a[14]
 q_a[15] <= altsyncram_at24:auto_generated.q_a[15]
+=======
+q_a[0] <= altsyncram_lb24:auto_generated.q_a[0]
+q_a[1] <= altsyncram_lb24:auto_generated.q_a[1]
+q_a[2] <= altsyncram_lb24:auto_generated.q_a[2]
+q_a[3] <= altsyncram_lb24:auto_generated.q_a[3]
+q_a[4] <= altsyncram_lb24:auto_generated.q_a[4]
+q_a[5] <= altsyncram_lb24:auto_generated.q_a[5]
+q_a[6] <= altsyncram_lb24:auto_generated.q_a[6]
+q_a[7] <= altsyncram_lb24:auto_generated.q_a[7]
+q_a[8] <= altsyncram_lb24:auto_generated.q_a[8]
+q_a[9] <= altsyncram_lb24:auto_generated.q_a[9]
+q_a[10] <= altsyncram_lb24:auto_generated.q_a[10]
+q_a[11] <= altsyncram_lb24:auto_generated.q_a[11]
+q_a[12] <= altsyncram_lb24:auto_generated.q_a[12]
+q_a[13] <= altsyncram_lb24:auto_generated.q_a[13]
+q_a[14] <= altsyncram_lb24:auto_generated.q_a[14]
+q_a[15] <= altsyncram_lb24:auto_generated.q_a[15]
+>>>>>>> Stashed changes
 q_b[0] <= <GND>
 eccstatus[0] <= <GND>
 eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
+<<<<<<< Updated upstream
 |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component|altsyncram_at24:auto_generated
+=======
+|SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component|altsyncram_lb24:auto_generated
+>>>>>>> Stashed changes
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -3961,26 +4023,33 @@ clock_4Hz <= clock_4Hz~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |SCOMP_System|LEDController:inst6
-CS => LEDs[0]~reg0.CLK
-CS => LEDs[1]~reg0.CLK
-CS => LEDs[2]~reg0.CLK
-CS => LEDs[3]~reg0.CLK
-CS => LEDs[4]~reg0.CLK
-CS => LEDs[5]~reg0.CLK
-CS => LEDs[6]~reg0.CLK
-CS => LEDs[7]~reg0.CLK
-CS => LEDs[8]~reg0.CLK
-CS => LEDs[9]~reg0.CLK
-WRITE_EN => LEDs[0]~reg0.ENA
-WRITE_EN => LEDs[9]~reg0.ENA
-WRITE_EN => LEDs[8]~reg0.ENA
-WRITE_EN => LEDs[7]~reg0.ENA
-WRITE_EN => LEDs[6]~reg0.ENA
-WRITE_EN => LEDs[5]~reg0.ENA
-WRITE_EN => LEDs[4]~reg0.ENA
-WRITE_EN => LEDs[3]~reg0.ENA
-WRITE_EN => LEDs[2]~reg0.ENA
-WRITE_EN => LEDs[1]~reg0.ENA
+CS => reset_index_flag.CLK
+CS => morse_pattern[0].CLK
+CS => morse_pattern[1].CLK
+CS => morse_pattern[2].CLK
+CS => morse_pattern[3].CLK
+CS => morse_pattern[4].CLK
+CS => morse_pattern[5].CLK
+CS => morse_pattern[6].CLK
+CS => morse_pattern[7].CLK
+CS => morse_pattern[8].CLK
+CS => morse_pattern[9].CLK
+WRITE_EN => morse_pattern[9].ENA
+WRITE_EN => morse_pattern[8].ENA
+WRITE_EN => morse_pattern[7].ENA
+WRITE_EN => morse_pattern[6].ENA
+WRITE_EN => morse_pattern[5].ENA
+WRITE_EN => morse_pattern[4].ENA
+WRITE_EN => morse_pattern[3].ENA
+WRITE_EN => morse_pattern[2].ENA
+WRITE_EN => morse_pattern[1].ENA
+WRITE_EN => morse_pattern[0].ENA
+WRITE_EN => reset_index_flag.ENA
+RESETN => reset_index.ACLR
+RESETN => bit_index[0].ACLR
+RESETN => bit_index[1].ACLR
+RESETN => bit_index[2].ACLR
+RESETN => bit_index[3].ACLR
 RESETN => LEDs[0]~reg0.ACLR
 RESETN => LEDs[1]~reg0.ACLR
 RESETN => LEDs[2]~reg0.ACLR
@@ -3991,6 +4060,35 @@ RESETN => LEDs[6]~reg0.ACLR
 RESETN => LEDs[7]~reg0.ACLR
 RESETN => LEDs[8]~reg0.ACLR
 RESETN => LEDs[9]~reg0.ACLR
+<<<<<<< Updated upstream
+=======
+RESETN => reset_index_flag.ACLR
+RESETN => morse_pattern[0].ACLR
+RESETN => morse_pattern[1].ACLR
+RESETN => morse_pattern[2].ACLR
+RESETN => morse_pattern[3].ACLR
+RESETN => morse_pattern[4].ACLR
+RESETN => morse_pattern[5].ACLR
+RESETN => morse_pattern[6].ACLR
+RESETN => morse_pattern[7].ACLR
+RESETN => morse_pattern[8].ACLR
+RESETN => morse_pattern[9].ACLR
+LED_CLK => reset_index.CLK
+LED_CLK => bit_index[0].CLK
+LED_CLK => bit_index[1].CLK
+LED_CLK => bit_index[2].CLK
+LED_CLK => bit_index[3].CLK
+LED_CLK => LEDs[0]~reg0.CLK
+LED_CLK => LEDs[1]~reg0.CLK
+LED_CLK => LEDs[2]~reg0.CLK
+LED_CLK => LEDs[3]~reg0.CLK
+LED_CLK => LEDs[4]~reg0.CLK
+LED_CLK => LEDs[5]~reg0.CLK
+LED_CLK => LEDs[6]~reg0.CLK
+LED_CLK => LEDs[7]~reg0.CLK
+LED_CLK => LEDs[8]~reg0.CLK
+LED_CLK => LEDs[9]~reg0.CLK
+>>>>>>> Stashed changes
 LEDs[0] <= LEDs[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 LEDs[1] <= LEDs[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 LEDs[2] <= LEDs[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -4016,6 +4114,23 @@ IO_DATA[11] => ~NO_FANOUT~
 IO_DATA[12] => ~NO_FANOUT~
 IO_DATA[13] => ~NO_FANOUT~
 IO_DATA[14] => ~NO_FANOUT~
+<<<<<<< Updated upstream
 IO_DATA[15] => ~NO_FANOUT~
+=======
+FLASH_EN => bit_index.OUTPUTSELECT
+FLASH_EN => bit_index.OUTPUTSELECT
+FLASH_EN => bit_index.OUTPUTSELECT
+FLASH_EN => bit_index.OUTPUTSELECT
+FLASH_EN => LEDs.OUTPUTSELECT
+FLASH_EN => LEDs.OUTPUTSELECT
+FLASH_EN => LEDs.OUTPUTSELECT
+FLASH_EN => LEDs.OUTPUTSELECT
+FLASH_EN => LEDs.OUTPUTSELECT
+FLASH_EN => LEDs.OUTPUTSELECT
+FLASH_EN => LEDs.OUTPUTSELECT
+FLASH_EN => LEDs.OUTPUTSELECT
+FLASH_EN => LEDs.OUTPUTSELECT
+FLASH_EN => LEDs.OUTPUTSELECT
+>>>>>>> Stashed changes
 
 
