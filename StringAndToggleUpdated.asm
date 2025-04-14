@@ -59,6 +59,7 @@ TOGGLE_MODE:
                    	IN Switches
                     AND Mask
                     OUT LEDs
+					OUT Hex
                     
                     ; check switch 8
                     IN Switches
@@ -82,8 +83,7 @@ WAITING_LOOP:
 ;; Peripherals
 Switches: EQU 000
 Timer: EQU 002
-LEDs: EQU 001
-Morse: EQU &H020 ; change LEDs to Morse
+LEDs: EQU &H020
 Hex: EQU 004
 
 ; String to Display
