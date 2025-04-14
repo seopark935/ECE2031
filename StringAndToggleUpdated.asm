@@ -87,10 +87,16 @@ LEDs: EQU &H020
 Hex: EQU 004
 
 ; String to Display
-CurrAddr: DW ; current address when iterating through string
-Char1: DW &H45 ; first character of string (address of string)
-Char2: DW &H43 ; second character of string
-Char3: DW &H45 ; third character of string
+Char1: DW &H45 ; 'E'
+Char2: DW &H4C ; 'L'
+Char3: DW &H45 ; 'E'
+Char4: DW &H43 ; 'C'
+Char5: DW &H54 ; 'T'
+Char6: DW &H52 ; 'R'
+Char7: DW &H49 ; 'I'
+Char8: DW &H43 ; 'C'
+Char9: DW &H41 ; 'A'
+Char10: DW &H4C ; 'L'
 CharEnd: DW &H0 ; null byte to signify end of string
 
 ; Tools for Toggle
