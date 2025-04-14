@@ -35,19 +35,19 @@ CONTENT BEGIN
 001B: 3005; --                     JNEG START
 001C: 2819; --                     JUMP END_STRING_LOOP
 001D: 9000; --                     IN Switches
-001E: 483A; --                     AND Mask
+001E: 4841; --                     AND Mask
 001F: 6FBF; --                     ADDI -65
 0020: 302D; --                     JNEG INVALID_INPUT ; input is less than 65
 0021: 9000; --                     IN Switches
-0022: 483A; --                     AND Mask
+0022: 4841; --                     AND Mask
 0023: 6FA6; --                     ADDI -90
 0024: 382D; --                     JPOS INVALID_INPUT ; input is greater than 90
 0025: 9000; --                    	IN Switches
-0026: 483A; --                     AND Mask
+0026: 4841; --                     AND Mask
 0027: 9820; --                     OUT LEDs
 0028: 9804; -- 					OUT Hex
 0029: 9000; --                     IN Switches
-002A: 483B; --                     AND Bit8
+002A: 4842; --                     AND Bit8
 002B: 4005; --                     JZERO START
 002C: 281D; --                     JUMP TOGGLE_MODE
 002D: B800; -- 					LOADI 0
@@ -59,11 +59,18 @@ CONTENT BEGIN
 0033: 3031; --                     JNEG WAITING_LOOP
 0034: 8800; --                     RETURN
 0035: 0000; -- CurrAddr: DW ; current address when iterating through string
-0036: 0045; -- Char1: DW &H45 ; first character of string (address of string)
-0037: 0043; -- Char2: DW &H43 ; second character of string
-0038: 0045; -- Char3: DW &H45 ; third character of string
-0039: 0000; -- CharEnd: DW &H0 ; null byte to signify end of string
-003A: 00FF; -- Mask: DW &b0011111111 ; mask to get input for character select (switches[0:7])
-003B: 0100; -- Bit8: DW &b0100000000
-[003C..07FF] : 0000; -- [empty memory]
+0036: 0045; -- Char1: DW &H45 ; 'E'
+0037: 004C; -- Char2: DW &H4C ; 'L'
+0038: 0045; -- Char3: DW &H45 ; 'E'
+0039: 0043; -- Char4: DW &H43 ; 'C'
+003A: 0054; -- Char5: DW &H54 ; 'T'
+003B: 0052; -- Char6: DW &H52 ; 'R'
+003C: 0049; -- Char7: DW &H49 ; 'I'
+003D: 0043; -- Char8: DW &H43 ; 'C'
+003E: 0041; -- Char9: DW &H41 ; 'A'
+003F: 004C; -- Char10: DW &H4C ; 'L'
+0040: 0000; -- CharEnd: DW &H0 ; null byte to signify end of string
+0041: 00FF; -- Mask: DW &b0011111111 ; mask to get input for character select (switches[0:7])
+0042: 0100; -- Bit8: DW &b0100000000
+[0043..07FF] : 0000; -- [empty memory]
 END;

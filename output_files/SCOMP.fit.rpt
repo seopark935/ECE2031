@@ -1,5 +1,5 @@
 Fitter report for SCOMP
-Mon Apr 14 12:08:50 2025
+Mon Apr 14 12:23:22 2025
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -66,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Mon Apr 14 12:08:50 2025       ;
+; Fitter Status                   ; Successful - Mon Apr 14 12:23:22 2025       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; SCOMP                                       ;
 ; Top-level Entity Name           ; SCOMP_System                                ;
@@ -158,20 +158,20 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 10          ;
 ;                            ;             ;
-; Average used               ; 1.19        ;
+; Average used               ; 1.18        ;
 ; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.7%      ;
-;     Processor 3            ;   2.6%      ;
-;     Processor 4            ;   2.5%      ;
-;     Processor 5            ;   2.1%      ;
-;     Processor 6            ;   2.1%      ;
-;     Processor 7            ;   2.0%      ;
+;     Processor 2            ;   2.5%      ;
+;     Processor 3            ;   2.4%      ;
+;     Processor 4            ;   2.2%      ;
+;     Processor 5            ;   2.0%      ;
+;     Processor 6            ;   2.0%      ;
+;     Processor 7            ;   1.8%      ;
 ;     Processor 8            ;   1.8%      ;
-;     Processor 9            ;   1.8%      ;
-;     Processor 10           ;   1.7%      ;
+;     Processor 9            ;   1.7%      ;
+;     Processor 10           ;   1.5%      ;
 +----------------------------+-------------+
 
 
@@ -2320,9 +2320,9 @@ Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments 
 Info (144001): Generated suppressed messages file C:/Users/john4/Documents/Github/ECE2031/output_files/SCOMP.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 19 warnings
     Info: Peak virtual memory: 6868 megabytes
-    Info: Processing ended: Mon Apr 14 12:08:51 2025
+    Info: Processing ended: Mon Apr 14 12:23:23 2025
     Info: Elapsed time: 00:00:53
-    Info: Total CPU time (on all processors): 00:01:47
+    Info: Total CPU time (on all processors): 00:01:48
 
 
 +----------------------------+
